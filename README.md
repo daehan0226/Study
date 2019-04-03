@@ -7,7 +7,7 @@ Lagom, a [Jekyll][j] blog theme with just the right amount of style.
 Extracted lovingly from [http://mdswanson.com][mds] for your enjoyment!
 
 [asd]
-[asd]: www.naver.com
+
 
 * Responsive, based on [Skeleton][skeleton]
 * [Font Awesome][font-awesome] for icons
@@ -76,3 +76,4 @@ run into trouble or have suggestions. Pull Requests always welcome.
 [pages]: http://pages.github.com
 [twitter]: https://twitter.com/_swanson
 [pages]: https://github.com/github/pages-gem
+[asd]: https://www.naver.com
