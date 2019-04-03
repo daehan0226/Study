@@ -1,12 +1,13 @@
-# Lagom
+# Daehan LEE(Foxlee1015)'s blog
 
-> #### *Lagom* is a Swedish word with no direct English equivalent, meaning "just the right amount"
+> #### *Hello visitors"
 
 Lagom, a [Jekyll][j] blog theme with just the right amount of style. 
 
 Extracted lovingly from [http://mdswanson.com][mds] for your enjoyment!
 
-
+[asd]
+[asd]: www.naver.com
 
 * Responsive, based on [Skeleton][skeleton]
 * [Font Awesome][font-awesome] for icons
