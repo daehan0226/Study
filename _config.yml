@@ -1,5 +1,7 @@
+remote_theme : mmistakes/minimal-mistakes
 # General Jekyll Config
 highlighter: rouge
-url: http://example.com
+url: "https://Foxlee1015.github.io/Study"
+baseurl: ""
 lsi: false
 exclude: [LICENSE, CNAME, README.md, .gitignore, Gemfile, Gemfile.lock]
