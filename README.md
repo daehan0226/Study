@@ -2,14 +2,14 @@
 
 > #### *Hello visitors"
 
-> Do you want to check out my github pages for the [project] and for [study]
+> Do you want to check out my github pages for *[Projects]* and for *[Study]*
 
 - - -
 
 > ## Project
 1.
 2. 
-- - -
+
 
 > ## studying
 1. MySQL
@@ -18,7 +18,7 @@
 4.
 5.
 
-- - -
+
 
 > ## Contact
 I'd love to take to you about my studying and my project. Feel free to ask me any questions about them.
