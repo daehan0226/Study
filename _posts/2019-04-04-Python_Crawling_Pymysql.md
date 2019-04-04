@@ -5,10 +5,10 @@ categories:
 - blog
 ---
 
-< ##Python
+> # Python
 
 
-# Crawling ( selenium, BeautifulSoup )
+## Crawling ( selenium, BeautifulSoup )
 - - -
 
         from selenium import webdriver
@@ -37,9 +37,12 @@ categories:
             da.append(date.text)
             print(t)
             print(da)
-# * EXTRACTING THE RIGHT INFORMATION, INSERTING DATA FROM INTERNET TO DATABASE(TABLE);
+-  *EXTRACTING THE RIGHT INFORMATION, INSERTING DATA FROM INTERNET TO DATABASE(TABLE);*
+- - -
+
 - - -
 # Pymasql (sql.py)
+
 - Using pymysql library / Collecting datas
         import pymysql
 
