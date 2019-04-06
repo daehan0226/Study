@@ -4,7 +4,7 @@ title: Jupyter Notebook
 categories:
 - blog
 ---
-## Changing a working directory in jupyter notebook. [ref]
+## Changing working directory in jupyter notebook. [ref]
 
 * First you need to create the config file, using cmd :  jupyter notebook --generate-config 
 * Then, search for C:\Users\your_username\.jupyter folder (Search for that folder), and right click edit the jupyter_notebook_config.py.
