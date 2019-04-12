@@ -82,10 +82,10 @@ A database is a collection of information that is organized so that it can be ea
          =Show **id, name, frofile** from TABLE_A and **TABLE_B** by joinning TABLE_A.authour_id(col) = TABLE_B.id(col); 
          (only when TABLE_A.author_id and TABLE_B.id are same) 
   
-3-2. why do you use join in mysql?
+- 3-2. why do you use join in mysql?
     Using JOINS, you can *fetch exactly the data you want from any number of tables with **just one query***, using any search parameter you chose to filter the results. MySQL can also **utilize things such as Indexes to maximize performance**, which your API code can not.
     Also, by using joins instead of multiple queries, you **maximize the placement of the calculation burden on the database**. This means you can make better use of the database's abilities to search through, filter, sort, etc.
-3-3. SELECT TABLENAME_A.id AS new_id = the name of the col(id) will change to new_id
+- 3-3. SELECT TABLENAME_A.id AS new_id = the name of the col(id) will change to new_id
   
 [datatype]: https://www.techonthenet.com/mysql/tables/create_table.php 
 [link-Ubuntu-mysql-install]: https://grd406.blog.me/221499786832
