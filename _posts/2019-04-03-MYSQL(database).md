@@ -1,6 +1,6 @@
 ---
 layout: post
-title: MYSQL
+title: MYSQL(database)
 categories:
 - blog
 ---
