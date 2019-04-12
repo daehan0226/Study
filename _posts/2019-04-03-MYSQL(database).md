@@ -4,7 +4,7 @@ title: MYSQL(database)
 categories:
 - blog
 ---
-# MYSQL
+# MYSQL(database)
 
 [link-Ubuntu-mysql-install]
 
