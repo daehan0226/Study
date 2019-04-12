@@ -1,8 +1,8 @@
 # Daehan LEE(Foxlee1015)'s blog
 
-> #### *Hello visitors"
+> # *Hello visitors"
 
-> Do you want to check out my github pages for *[Study]* ( domain : foxlee.ga )
+* Do you want to check out my github pages for *[Study]* ( domain : foxlee.ga )
 
 - - -
 
@@ -12,7 +12,7 @@
 
 > ## This is the list of programming tools that I am using at the monment
 * MySQL
-* Python(Pandas, Crawling, flask, matplotlib)
+* Python(Numpy, Pandas, Crawling, flask, matplotlib)
 * Linux
 * Markdown
 
