@@ -7,7 +7,7 @@
 - - -
 
 > ## This is what I am working on at the monment
-1. Patent research / Graphe from Patent data 
+1. Patent research / Graphs from Patent data 
 
 
 > ## This is the list of programming tools that I am using at the monment
