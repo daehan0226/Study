@@ -2,7 +2,7 @@
 
 > # *Hello visitors"
 
-* Do you want to check out my github pages for *[Study]* ( domain : foxlee.ga )
+* Do you want to check out my github page for *[Study]* ( domain : www.foxlee.ga )
 
 - - -
 
@@ -15,6 +15,7 @@
 * Python(Numpy, Pandas, Crawling, flask, matplotlib)
 * Linux
 * Markdown
+* Websever
 
 > ## This is the list for study in Computer Science
 1. DNS(concept, resolving flow, record, blind, powerdns, dig, nslookup)
