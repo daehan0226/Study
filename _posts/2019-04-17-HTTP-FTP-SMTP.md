@@ -24,3 +24,14 @@ categories:
 
 > SMTP
 * SMTP is what is used by Email servers all over the globe to communicate with each other, so that the assignment you submitted at 11:59 pm reaches your professor’s inbox within the deadline.
+
+
+
+> How do their implementations differ?
+* All the three are Application Layer Protocols, using TCP as the underlying Transport layer protocol. 
+* But the way they use it, and are implemented in general, is vastly different. The below table briefly differentiates between them.
+
+1. HTTP is stateless. A Stateless protocol implies that the HTTP Web Server does not maintains which request had originated from which user. Hence, to give a customized service to the user, HTTP uses Cookies.
+2. FTP is Out-of-band, as it uses a separate channel to send data (Data connection), as to send control information (Control connection).
+3. As SMTP is much older that HTTP, it restricts all its messages to be in 7-bit ASCII format. Whereas HTTP has no such restriction.
+HTTP encapsulates each file in a different HTTP message. Whereas, SMTP places all the contents of a mail in a single message.
