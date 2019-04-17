@@ -40,6 +40,8 @@ HTTP encapsulates each file in a different HTTP message. Whereas, SMTP places al
 
 <img src="https://github.com/Foxlee1015/Study/blob/master/_posts/images/HTTP%2CSMTP%2CFTP.png">
 
+{% include HTTP,SMTP,FTP.png %}
+
 
 * (Ref: https://www.geeksforgeeks.org/what-are-the-differences-between-http-ftp-and-smtp/)
 
