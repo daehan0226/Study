@@ -35,3 +35,8 @@ categories:
 2. FTP is Out-of-band, as it uses a separate channel to send data (Data connection), as to send control information (Control connection).
 3. As SMTP is much older that HTTP, it restricts all its messages to be in 7-bit ASCII format. Whereas HTTP has no such restriction.
 HTTP encapsulates each file in a different HTTP message. Whereas, SMTP places all the contents of a mail in a single message.
+
+![Alt text](images/HTTP,SMTP,FTP.png)
+
+* (Ref: https://www.geeksforgeeks.org/what-are-the-differences-between-http-ftp-and-smtp/)
+
