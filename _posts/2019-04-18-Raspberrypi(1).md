@@ -1,6 +1,6 @@
 ---
 layout: post
-title: raspberry pi
+title: Raspberrypi(1)
 categories:
 - blog
 ---
