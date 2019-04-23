@@ -30,3 +30,5 @@ These are all transport-level connections. Remote computers still need to qualif
 * https://installvirtual.com/install-python-3-on-raspberry-pi-raspbian/ - python 3.6.8 on raspberry
 
 * https://blog.naver.com/ghdry2563/221173232774  - iptime - portfowarding
+
+* sudo ufw allow 20/tcp
