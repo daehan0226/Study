@@ -31,4 +31,8 @@ These are all transport-level connections. Remote computers still need to qualif
 
 * https://blog.naver.com/ghdry2563/221173232774  - iptime - portfowarding
 
-* sudo ufw allow 20/tcp
+* sudo ufw allow 20/tcp  - 내부 접속 안될때
+
+
+
+
