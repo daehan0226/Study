@@ -4,15 +4,46 @@ title: Subdomain
 categories:
 - blog
 ---
-환경설정 //
+
+> #환경설정
 1. virtualenv   
- // 다른 app 이 설치된 디렉토리에 가상환경 설정 - req.text , db 설정
-2. gunicorn     
- // 포트 설정 gunicorn --bind 0.0.0.0:5000 run:app   ( 새로운 프로젝트의 앱 이름 run, 포트 5000에 올때 gunicorn 이 이 앱을 향함) 
-3. supervisor   
- // 서버가 켜져있으면 python run.py or flask run 같이 실행하지 않아도 자동으로 켜짐(단, 라즈베리파이가 전원이 나갔다가 다시 켜지면 시스템 다시 작동시켜야함 -> sudo systemctl start nginx, 안되면 sudo systemctl stop apache2 후 다시. (아파치가 실행중일수 있음)
+ 다른 app 이 설치된 디렉토리에 가상환경 설정 - req.text , db 설정
+2. nginx 
+ 서버 설정 (server_name, location, proxy)
+3. gunicorn     
+ 포트 설정 gunicorn --bind 0.0.0.0:5000 run:app   ( 새로운 프로젝트의 앱 이름 run, 포트 5000에 올때 gunicorn 이 이 앱을 향함)
+ 포트 5000 일때 -> sudo ufw allow 5000 외부에서 접근 가능하도록 설정
+4.. supervisor   
+ 서버가 켜져있으면 python run.py or flask run 같이 실행하지 않아도 자동으로 켜짐(단, 라즈베리파이가 전원이 나갔다가 다시 켜지면 시스템 다시 작동시켜야함 -> sudo systemctl start nginx, 안되면 sudo systemctl stop apache2 후 다시. (아파치가 실행중일수 있음)
 
 > 1st App 
+ - **/etc/nginx/sites-enabled/flaskblog
+ server {
+        server_name www.foxlee-p.ga;
+
+        location /static {
+                alias /home/pi/fdaehan/flaskblog/static;
+        }
+
+        location / {
+                proxy_pass http://localhost:8000;
+                include /etc/nginx/proxy_params;
+                proxy_redirect off;
+        }
+ server {
+	listen 80;
+	server_name 121.169.130.211;
+	
+	location /static {
+		alias /home/pi/fdaehan/flaskblog/static;
+	}
+
+	location / {
+		proxy_pass http://localhost:8000;
+		include /etc/nginx/proxy_params;
+		proxy_redirect off;
+	}    
+
  -   **/etc/supervisor/conf.d/flaskblog.conf**
  -  [program:flaskblog]
  -  directory=/home/pi/fdaehan
@@ -27,6 +58,36 @@ categories:
 
 
 > 2nd App
+ - **/etc/nginx/sites-enabled/shopping
+ server {
+	listen 80;
+	server_name 121.169.130.211:5000;                               # 서브도메인마다 포트 설정
+
+	location /static {
+		alias /home/pi/Shopping-website/shopping_website/static;
+	} 
+
+	location / {
+		proxy_pass http://localhost:5000;
+		include /etc/nginx/proxy_params;
+		proxy_redirect off;
+	}
+}
+ server {
+	listen 80;
+	server_name **shop.foxlee-p.ga;**                         Freenom 에서 subdomain 신청 -> shop 따라서 www.shop.fox~ 가 아닌 shop.foxlee~
+
+	location /static {
+		alias /home/pi/Shopping-website/shopping_website/static;
+	} 
+
+	location / {
+		proxy_pass http://localhost:5000;
+		include /etc/nginx/proxy_params;
+		proxy_redirect off;
+	}
+}
+
  -   **/etc/supervisor/conf.d/shopping_website.conf**
  -  [program:shopping_website]
  -  directory=/home/pi/Shopping_website
@@ -38,3 +99,5 @@ categories:
  -  killasgroup=true
  -  stderr_logfile=/var/log/shopping_website/shopping_website.err.log
  -  stdout_logfile=/var/log/shopping_website/shopping_website.out.log
+
+
