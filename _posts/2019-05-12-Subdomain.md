@@ -107,6 +107,32 @@ categories:
 2. 원하는 url 선택해서 (기존 도메인, 서브도메인) 발급
 3. No redirect(접속자가 http 입력하면 http로 접속) / **redirect(https로만 접속가능)**
  
+> 인증서 발급 후 추가되는 부분 **/etc/nginx/sites-enabled/shopping**
+ 
+* listen 443 ssl; # managed by Certbot
+* ssl_certificate /etc/letsencrypt/live/www.foxlee-p.ga/fullchain.pem; # managed by Certbot
+* ssl_certificate_key /etc/letsencrypt/live/www.foxlee-p.ga/privkey.pem; # managed by Certbot
+* include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
+* ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
+
+ server {
+    if ($host = shop.foxlee-p.ga) {                  -> 접속자가 shop.foxlee-p.ga 입력하면
+        return 301 https://$host$request_uri;        -> https:// 로 redirect
+    } # managed by Certbot
+
+
+	listen 80;                          -> 80 : http 에 접속되면
+	server_name shop.foxlee-p.ga;       -> https 인증된 곳으로
+    return 404; # managed by Certbot
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
  
  
  [set_port]: https://stackoverflow.com/questions/48205495/python-how-to-run-multiple-flask-apps-from-same-client-machine
