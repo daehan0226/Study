@@ -4,6 +4,7 @@ title: Subdomain
 categories:
 - blog
 ---
+[set_port]
 
 > #환경설정
 1. virtualenv   
@@ -99,5 +100,9 @@ categories:
  -  killasgroup=true
  -  stderr_logfile=/var/log/shopping_website/shopping_website.err.log
  -  stdout_logfile=/var/log/shopping_website/shopping_website.out.log
+ 
+ 
+ [set_port]: https://stackoverflow.com/questions/48205495/python-how-to-run-multiple-flask-apps-from-same-client-machine
+
 
 
