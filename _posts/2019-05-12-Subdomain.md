@@ -102,6 +102,13 @@ categories:
  -  stdout_logfile=/var/log/shopping_website/shopping_website.out.log
  
  
+> SSL 인증서 발급 - 
+1. sudo certbot --nginx 
+2. 원하는 url 선택해서 (기존 도메인, 서브도메인) 발급
+3. No redirect(접속자가 http 입력하면 http로 접속) / **redirect(https로만 접속가능)**
+ 
+ 
+ 
  [set_port]: https://stackoverflow.com/questions/48205495/python-how-to-run-multiple-flask-apps-from-same-client-machine
 
 
