@@ -115,15 +115,15 @@ categories:
 * include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
 * ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
 
- server {
-    if ($host = shop.foxlee-p.ga) {                  -> 접속자가 shop.foxlee-p.ga 입력하면
-        return 301 https://$host$request_uri;        -> https:// 로 redirect
-    } # managed by Certbot
+ * server {
+ *   if ($host = shop.foxlee-p.ga) {                  -> 접속자가 shop.foxlee-p.ga 입력하면
+ *       return 301 https://$host$request_uri;        -> https:// 로 redirect
+ *   } # managed by Certbot
 
 
-	listen 80;                          -> 80 : http 에 접속되면
-	server_name shop.foxlee-p.ga;       -> https 인증된 곳으로
-    return 404; # managed by Certbot
+*	listen 80;                          -> 80 : http 에 접속되면
+*	server_name shop.foxlee-p.ga;       -> https 인증된 곳으로
+*    return 404; # managed by Certbot
 
  
  
