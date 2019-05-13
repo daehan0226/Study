@@ -44,14 +44,12 @@ SSL 인증서 발급
    * ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
 
 > Redirect
-	server {
+*	server {
 	    if ($host = english.foxlee-p.ga) {
             return 301 https://$host$request_uri;
         } # managed by Certbot
 
-
 	server_name english.foxlee-p.ga;
     listen 80;
     return 404; # managed by Certbot
-    
 ---
