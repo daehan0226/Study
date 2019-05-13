@@ -25,7 +25,7 @@ categories:
  - gunicorn 설치 - 가상환경안 - sudo pip install gunicorn -> gunicorn --bind 0.0.0.0:5001 run:app
  - supervisor - sudo nano /etc/supervisor/conf.d/english.conf -> 디렉토리, 커맨드, 로그정보파일 위치 수정 후 로그정보 파일 생성
  - cd /var/log -> sudo mkdir english -> cd english -> sudo touch english.err.log, sudo touch english.out.log
- - 모든 설정 끝 -> sudo systemctl restart nginx - > sudo supervisorctl restart all 
+ - 모든 설정 끝 -> sudo systemctl restart nginx - > sudo supervisorctl reload 먼저 하고 안되면 -> // sudo supervisorctl restart all   
  
 * 가상환경에 python3 설치 실패시 virtualenv -p python3 (envname)
 * sudo pip install gunicorn flask - 설치 /// pip3 install ~ 실패 pip3 가 아닌 pip 로
