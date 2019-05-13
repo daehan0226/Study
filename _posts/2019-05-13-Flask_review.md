@@ -28,6 +28,7 @@ categories:
  - 모든 설정 끝 -> sudo systemctl restart nginx - > sudo supervisorctl restart all 
  
 * 가상환경에 python3 설치 실패시 virtualenv -p python3 (envname)
+* sudo pip install gunicorn flask - 설치 /// pip3 install ~ 실패 pip3 가 아닌 pip 로
 
 ---
 SSL 인증서 발급
