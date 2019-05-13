@@ -22,7 +22,7 @@ categories:
  - 가상환경 구축  // run.py를 포함하는 디렉토리 english에 가상환경 구축 = english 디렉토리 안에서 sudo virtualenv **env숫자**
  - 가상환경 실행 // source bin/activate
  - nginx - sudo nano /etc/nginx/engish  -> sever_name / location / proxy 수정
- - gunicorn 설치 - 가상환경안 - sudo pip install gunicorn -> gunicorn --bin 0.0.0.0:5001 run.app
+ - gunicorn 설치 - 가상환경안 - sudo pip install gunicorn -> gunicorn --bind 0.0.0.0:5001 run:app
  - supervisor - sudo nano /etc/supervisor/conf.d/english.conf -> 디렉토리, 커맨드, 로그정보파일 위치 수정 후 로그정보 파일 생성
  - cd /var/log -> sudo mkdir english -> cd english -> sudo touch english.err.log, sudo touch english.out.log
  - 모든 설정 끝 -> sudo systemctl restart nginx - > sudo supervisorctl restart all 
