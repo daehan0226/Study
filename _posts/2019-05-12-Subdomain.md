@@ -15,7 +15,7 @@ categories:
  포트 설정 gunicorn --bind 0.0.0.0:5000 run:app   ( 새로운 프로젝트의 앱 이름 run, 포트 5000에 올때 gunicorn 이 이 앱을 향함)
  포트 5000 일때 -> sudo ufw allow 5000 외부에서 접근 가능하도록 설정
 4. supervisor 
- **supervisor 항상 돌아가므로 수정후에는 sudo supervisorctl restart all** 필요
+ **supervisor 항상 돌아가므로 수정후에는 sudo supervisorctl reload** 필요 또는 
  서버가 켜져있으면 python run.py or flask run 같이 실행하지 않아도 자동으로 켜짐(단, 라즈베리파이가 전원이 나갔다가 다시 켜지면 시스템 다시 작동시켜야함 -> sudo systemctl start nginx, 안되면 sudo systemctl stop apache2 후 다시. (아파치가 실행중일수 있음)
 
 > 1st App 
@@ -93,7 +93,7 @@ categories:
  -   **/etc/supervisor/conf.d/shopping_website.conf**
  -  [program:shopping_website]
  -  directory=/home/pi/Shopping_website
- -  command=/home/pi/Shopping_website/bin/gunicorn -bind 0.0.0.0:5000 run:app
+ -  command=/home/pi/Shopping_website/bin/gunicorn --bind 0.0.0.0:5000 run:app
  -  user=pi
  -  autostart=true
  -  autorestart=true
