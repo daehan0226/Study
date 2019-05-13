@@ -19,7 +19,7 @@ categories:
  
  3. 배포 (라즈베리파이로 프로젝트 옮긴 후)
  - port 열기 sudo nano ufw allow 5001 (run.py -> app.run(debug=True, host='0.0.0.0', port:5001)
- - 가상환경 구축  // run.py를 포함하는 디렉토리 english에 가상환경 구축 = english 디렉토리 바로 밖에에서 sudo virtualenv **english**
+ - 가상환경 구축  // run.py를 포함하는 디렉토리 english에 가상환경 구축 = english 디렉토리 안에서 sudo virtualenv **env숫자**
  - 가상환경 실행 // source bin/activate
  - nginx - sudo nano /etc/nginx/engish  -> sever_name / location / proxy 수정
  - gunicorn 설치 - 가상환경안 - sudo pip install gunicorn -> gunicorn --bin 0.0.0:5001 run.app
