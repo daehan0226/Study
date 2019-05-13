@@ -18,17 +18,17 @@ categories:
  
  
  3. 배포 (라즈베리파이로 프로젝트 옮긴 후)
- - port 열기 sudo nano ufw allow 5001 (run.py -> app.run(debug=True, host='0.0.0.0', port:5001)
- - 가상환경 구축  // run.py를 포함하는 디렉토리 english에 가상환경 구축 = english 디렉토리 안에서 sudo virtualenv **env숫자**
+ - port 열기 sudo nano ufw allow **5001** (run.py -> app.run(debug=True, host='0.0.0.0', **port:5001**)
+ - 가상환경 구축  // run.py를 포함하는 디렉토리 english에 가상환경 구축 = english 디렉토리 안에서 sudo virtualenv **env**
  - 가상환경 실행 // source bin/activate
  - nginx - sudo nano /etc/nginx/engish  -> sever_name / location / proxy 수정
- - gunicorn 설치 - 가상환경안 - sudo pip install gunicorn -> gunicorn --bind 0.0.0.0:5001 run:app
+ - gunicorn 설치 - 가상환경안 - sudo pip install gunicorn -> **gunicorn --bind 0.0.0.0:5001 run:app**  5001 대신 다른 포트번호 / 오타주의
  - supervisor - sudo nano /etc/supervisor/conf.d/english.conf -> 디렉토리, 커맨드, 로그정보파일 위치 수정 후 로그정보 파일 생성
  - cd /var/log -> sudo mkdir english -> cd english -> sudo touch english.err.log, sudo touch english.out.log
- - 모든 설정 끝 -> sudo systemctl restart nginx - > sudo supervisorctl reload 먼저 하고 안되면 -> // sudo supervisorctl restart all   
+ - 모든 설정 끝 -> sudo systemctl restart nginx - > sudo supervisorctl **reload** 먼저 하고 안되면 -> // sudo supervisorctl restart all   
  
 * 가상환경에 python3 설치 실패시 virtualenv -p python3 (envname)
-* sudo pip install gunicorn flask - 설치 /// pip3 install ~ 실패 pip3 가 아닌 pip 로
+* sudo **pip** install gunicorn flask - 설치 /// pip3 install ~ 실패 pip3 가 **아닌 pip** 
 
 ---
 SSL 인증서 발급
