@@ -35,6 +35,8 @@ SSL 인증서 발급
 2. 원하는 URL 선택
 3. Redirect
 4. etc/nginx/sites-enabled/english 폴더
+
+- - -
    * listen 443 ssl; # managed by Certbot
    * ssl_certificate /etc/letsencrypt/live/english.foxlee-p.ga/fullchain.pem; # managed by Certbot
    * ssl_certificate_key /etc/letsencrypt/live/english.foxlee-p.ga/privkey.pem; # managed by Certbot
@@ -42,12 +44,14 @@ SSL 인증서 발급
    * ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
 
 > Redirect
- server {
-    if ($host = english.foxlee-p.ga) {
-        return 301 https://$host$request_uri;
-    } # managed by Certbot
+	server {
+	    if ($host = english.foxlee-p.ga) {
+            return 301 https://$host$request_uri;
+        } # managed by Certbot
 
 
 	server_name english.foxlee-p.ga;
     listen 80;
     return 404; # managed by Certbot
+    
+---
