@@ -27,3 +27,4 @@ categories:
  - cd /var/log -> sudo mkdir english -> cd english -> sudo touch english.err.log, sudo touch english.out.log
  - 모든 설정 끝 -> sudo systemctl restart nginx - > sudo supervisorctl restart all 
  
+* 가상환경에 python3 설치 실패시 virtualenv -p python3 (envname)
