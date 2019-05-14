@@ -33,6 +33,8 @@ categories:
                   return render_template('home.html', form=form, rd_sen=rd_sen, n=n)
           else:
               flash('Hello')
+              if len(answer) >= 2:
+                  answer.pop(0)             # home에만 반복적으로 접속할 경우 대비
               return render_template('home.html', form=form, rd_sen=rd_sen, n=n)
               
       # 수정 전                                      숫자 과정 참고
