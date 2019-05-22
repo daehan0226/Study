@@ -18,8 +18,12 @@ categories:
         };
         </script>
       </head>
-      
-      <body onload="bottom_new('bottom');">             # 원하는 곳에 함수 호출  ID = bottom
+        {% if tag_num: %}
+        <body onload="bottom_new('bottom');">
+        {% else %}
+        <body>
+        {% endif %}
+                    # 원하는 곳에 함수 호출  ID = bottom
       
       <div id="bottom"><p></p></div>                    # 이부분으로 scrolldown 
       
