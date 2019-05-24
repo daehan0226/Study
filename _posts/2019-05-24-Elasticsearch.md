@@ -7,7 +7,9 @@ categories:
 [참고]: 
 
 * 엘라스틱서치 설치 https://www.elastic.co/kr/downloads/elasticsearch  / 
+* **에러** 버전 7.0(에러) --> 6.3 
 * run bin/elasticsearch.bat 
+
 * go to http://localhost:9200/
 * 클러스터 이름과 버전 정보를 확인할 수 있다. cluster_name은 config/elasticsearch.yml 에서 변경 가능
 
