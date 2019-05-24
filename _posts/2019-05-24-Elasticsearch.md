@@ -56,12 +56,76 @@ http://localhost:9200/nklee/phone/1 POST 요청과 함께 아래 JSON데이터�
 
 
 
+ - - -
+
+      from elasticsearch import Elasticsearch
+      from flask import Flask, jsonify, render_template, request
+      from wtforms import Form, PasswordField, validators, StringField, SubmitField, TextAreaField, FileField, BooleanField, SelectField
+      from datetime import datetime
+      app = Flask(__name__)
+
+      es = Elasticsearch('http://localhost:9200')
+
+      class dataForm(Form):
+          da1 = TextAreaField('Topic', [validators.data_required(), validators.Length(min=1, max=50)])
+          da2 = TextAreaField('Quiz', [validators.data_required(), validators.Length(min=1, max=50)])
+          submit = SubmitField('ok')
+
+      #데이터 추가
+      @app.route('/data/add', methods=['GET', 'POST'])
+      def data_add():
+          form = dataForm(request.form)
+          if request.method == "POST":
+              author, text = form.da1.data, form.da2.data                # html 데이터 입력
+              doc = {}
+              doc['author'] = author
+              doc['text']= text
+              doc['timestamp']= datetime.now()
+              res = es.index(index="test-index", doc_type='tweet', id=100, body=doc)   # 해당 id에 데이터 저장
+              return render_template('es_home.html', form=form, result=res['result'])
+          else:
+              return render_template('es_home.html', form=form, result="")
+
+      # 데이터 확인
+      @app.route('/data/check/id', methods=['GET', 'POST'])
+      def data_check(id):
+          res = es.get(index="test-index", doc_type='tweet', id=id)
+          print(res['_source'])
+          return render_template('es_home.html', result=res['_source'])
+
+      @app.route('/data/search', methods=['GET', 'POST'])
+      def data_search():
+          print('abc')
+          es.indices.refresh(index="test-index")
+
+          res = es.search(index="test-index", body={
+                                                  "query":
+                                                      {"match_all":
+                                                           {
+
+                                                           }
+                                                       }
+          }
+          )
+          result = []
+          for hit in res['hits']['hits']:
+              result.append("%(timestamp)s %(author)s: %(text)s" % hit["_source"])
+          return render_template('es_all.html', result=result)
 
 
+      if __name__ == '__main__':
+          app.run(debug=True)
 
 
+//
+엘라스틱서치 실행 후 
 
+* http://localhost:9200/**index_name**/**    test-index = index_name
+* http://localhost:9200/test-index?pretty  
+* http://localhost:9200/test-index/_search 
 
+* http://localhost:9200/test-index/**doc_type_name**/id
+* http://localhost:9200/test-index/tweet/100   id= 100, doc_type = tweet, index_name = test_index 
 
 
 
