@@ -20,3 +20,13 @@ categories:
 * While it is possible to use SSH with an ordinary user ID and password as credentials, SSH relies more often on public key pairs to authenticate hosts to each other. Individual users must still use their user ID and password (or other authentication methods) to connect to the remote host itself, but the local machine and the remote machine authenticate separately to each other. This is accomplished by generating a unique public key pair for each host in the communication; a single session requires two public key pairs: one public key pair to authenticate the remote machine to the local machine, and a second public key pair to authenticate the local machine to the remote machine.
 
 * SSH connections have been used to secure many different types of communications between a local machine and a remote host, including secure remote access to resources, remote execution of commands, delivery of software patches and updates and other administrative or management tasks.
+
+ - - -
+ < To use SSH on window
+ 1. Port 22 has to be open
+ 2. SSH SERVER program is running (freesshd)
+ 
+ 
+ https://blog.inidog.com/p/201808031462
+ https://blog.inidog.com/p/201808031460
+ 
