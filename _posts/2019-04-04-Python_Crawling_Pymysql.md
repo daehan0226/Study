@@ -69,9 +69,6 @@ categories:
             db.commit()
         db.close()
 
-- - - 
-> # ::: OUTPUT = SELECT?? - ERROR  pymysql.err.InterfaceError: (0, '')
 
-- - -
 
 
