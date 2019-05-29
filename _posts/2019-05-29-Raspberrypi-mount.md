@@ -18,3 +18,9 @@ Raspberrypi-mount
 5. umount rs_sub   ( before unplug the usb)
 
 * sudo echo "/dev/sda1 /mnt/usb_16gb ntfs-3g uid=pi,gid=pi 0 0" >> /etc/fstab    ======== auto mount 
+
+
+
+https://slim.tistory.com/2
+https://m.blog.naver.com/PostView.nhn?blogId=bieemiho92&logNo=220872266389&proxyReferer=https%3A%2F%2Fwww.google.com%2F
+http://www.notforme.kr/archives/793
