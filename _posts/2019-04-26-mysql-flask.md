@@ -13,3 +13,12 @@ categories:
 <우분투>
 5. sudo apt-get install libmysqlclient-dev
 6. pip install mysqlclient 
+
+
+
+(host : localhost -> 127.0.0.1)
+
+https://stackoverflow.com/questions/17975120/access-denied-for-user-rootlocalhost-using-password-yes-no-privileges
+
+
+https://stackoverflow.com/questions/18150858/operationalerror-2002-cant-connect-to-local-mysql-server-through-socket-v
