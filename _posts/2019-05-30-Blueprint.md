@@ -47,7 +47,7 @@ categories:
                 └── routes.py
 
 
-*
+* (1)
 
         from english import create_app
 
@@ -56,7 +56,7 @@ categories:
         if __name__ == '__main__':
             app.run(debug=True) # , host='0.0.0.0', port=5001
 
-* 
+* (2) 
 
         from flask import Flask
         from english.config import Config
@@ -90,7 +90,7 @@ categories:
 
             return app
 
-* 
+* (3)
 
         import os
 
