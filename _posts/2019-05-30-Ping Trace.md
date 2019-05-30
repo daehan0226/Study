@@ -25,7 +25,7 @@ categories:
 
 * cmd 
  - tracert foxlee-p.ga
- 
+ ![Alt text](tracert.png)
 
 
 [특정 포트]:https://tctt.tistory.com/143
