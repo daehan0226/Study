@@ -97,3 +97,7 @@ categories:
         class Config:
             secret_key = 'super secret key'
 
+* Error1.   app.register_blueprint(main)  - ( * * ) 함수가 될수 없음 ex) py내의 home, verb, audio
+* Error2. json 위치는 run.py 기준 
+* Error3. url_for('filename(모듈).fucntion')    - url_for('main.home')  = usl_for('모듈.모듈내의함수)
+
