@@ -25,7 +25,11 @@ categories:
 
 * cmd 
  - tracert foxlee-p.ga
- ![Alt text](/images/tracert.png)
+ 
+ ![Alt text](images/tracert.png)
+
+* 홉수 = 현재 노트북과 foxlee-p.ga(121.169.130.211 -dns) 웹서버 사이에 13개의 호스트가 있었음
+* RTT - 중간 시간은 각 호스트 도착지에 도착하는데 걸린 시간
 
 
 [특정 포트]:https://tctt.tistory.com/143
