@@ -24,8 +24,8 @@ categories:
 > # Trace
 
 * cmd 
- - tracert -d www.naver.com ??
-
+ - tracert foxlee-p.ga
+ 
 
 
 [특정 포트]:https://tctt.tistory.com/143
