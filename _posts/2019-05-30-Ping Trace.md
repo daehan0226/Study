@@ -23,7 +23,8 @@ categories:
 
 > # Trace
 
-
+* cmd 
+ - tracert -d www.naver.com ??
 
 
 
