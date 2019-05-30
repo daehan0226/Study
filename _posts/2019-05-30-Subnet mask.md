@@ -5,7 +5,7 @@ categories:
 - blog
 ---
 
-> # Subnet mask.md
+> # Subnet mask
 
 * A subnet mask is a number that defines **a range of IP addresses available within a network**. 
 * A single subnet mask **limits the number of valid IPs for a specific network**. 
