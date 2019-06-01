@@ -7,7 +7,7 @@ categories:
 
 > # Ping 
 
- ![Alt text](images/ping.png)
+![ping](https://user-images.githubusercontent.com/47915302/58748645-f45a8c80-84b6-11e9-86d5-45b54a27a678.png)
 
 * Ping is a basic Internet program that **allows a user to verify that a particular IP address exists and can accept requests**.
 
@@ -28,7 +28,9 @@ categories:
 * cmd 
  - tracert foxlee-p.ga
  
- ![Alt text](images/tracert.png)
+![tracert](https://user-images.githubusercontent.com/47915302/58748644-f290c900-84b6-11e9-84fd-8577acd4c8bd.png)
+
+
 
 * 홉수 = 현재 노트북과 foxlee-p.ga(121.169.130.211 -dns) 웹서버 사이에 13개의 호스트가 있었음
 * RTT - 중간 시간은 각 호스트 도착지에 도착하는데 걸린 시간
