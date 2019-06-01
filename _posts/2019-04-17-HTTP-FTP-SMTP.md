@@ -36,9 +36,7 @@ categories:
 3. As SMTP is much older that HTTP, it restricts all its messages to be in 7-bit ASCII format. Whereas HTTP has no such restriction.
 HTTP encapsulates each file in a different HTTP message. Whereas, SMTP places all the contents of a mail in a single message.
 
-![Alt text](./images/HTTP,SMTP,FTP.png)
-
-<img src="https://github.com/Foxlee1015/Study/blob/master/_posts/images/HTTP%2CSMTP%2CFTP.png">
+![HTTP,SMTP,FTP](https://user-images.githubusercontent.com/47915302/58748639-ed337e80-84b6-11e9-9928-77977ad8a37f.png)
 
 
 
