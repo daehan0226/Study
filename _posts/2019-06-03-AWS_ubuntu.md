@@ -28,3 +28,26 @@ categories:
 
 
 3. nginx / gunicorn / supervisor 
+
+
+4. DNS
+* https://my.freenom.com/clientarea.php?managedns=foxlee-patent.ga&domainid=1064681235
+* NAME = , TYPE = A, TTL = 300, TARGET = IP
+* NAME = WWW, TYPE = CNAME, TTL = 300, TARTGET = HOST NAME
+
+5. CERTBOT
+* Software , system 선택
+* $ sudo apt-get update
+* $ sudo apt-get install software-properties-common
+* $ sudo add-apt-repository universe
+* $ sudo add-apt-repository ppa:certbot/certbot
+* $ sudo apt-get update
+* $ sudo apt-get install certbot python-certbot-nginx 
+
+* **Nginx severname hostname 설정**
+* sudo certbot --nginx
+* nginx -t = 테스트 -------->  nginx: [alert] could not open error log file: open() "/var/log/nginx/error.log" failed (13: Permission denied)
+* **sudo nginx -t** 한번 하면 에러 해결
+* Https 포트 열기 -- ufw x (에러 발생)  **AWS 홈페이지에서 설정**
+
+
