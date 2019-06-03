@@ -35,7 +35,7 @@ categories:
 * NAME = , TYPE = A, TTL = 300, TARGET = IP
 * NAME = WWW, TYPE = CNAME, TTL = 300, TARTGET = HOST NAME
 
-5. CERTBOT
+5. CERTBOT                    https://certbot.eff.org/
 * Software , system 선택
 * $ sudo apt-get update
 * $ sudo apt-get install software-properties-common
