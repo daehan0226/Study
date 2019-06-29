@@ -1,7 +1,7 @@
 ---
 ---
 [
-{% for item in site.posts %}
+{% for item in site.posts or site.trobleshooting %}
 {"date": {{ item.date | date_to_rfc822 | jsonify }},
 "categories": {{ item.categories | jsonify }},
 "tags": {{ item.tags | jsonify}},
