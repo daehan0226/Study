@@ -24,7 +24,7 @@
  {% endfor %}
  
  
-  {% for post in site.posts.troubleshooting %}
+  {% for post in site.troubleshooting %}
  <entry>
    <title>{{ post.title }}</title>
    <link href="{{site.url}}{{ post.url }}"/>
