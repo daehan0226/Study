@@ -1,5 +1,7 @@
 <div id="home">
-  <h2><i class="fa fa-bookmark"></i> Troubleshooting </h2>
+  {{ site.categories }}
+   {% for category in site.categories %} {{ category }} {% endfor %}
+  <h2><i class="fa fa-bookmark"></i> Troubleshooting5 </h2>
   <ul id="blog-posts" class="posts">
     {% for post1 in site.posts %}
       {% if post1.categories == python %} python_post {% else %} No {% endif %}
