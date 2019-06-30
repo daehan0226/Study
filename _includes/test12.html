@@ -1,3 +1,4 @@
+{% assign category = site.category | default: page.title %}
 {% for category in site.categories %}
   <div id="home">
     <h2><i class="fa fa-bookmark"></i> {{ category }} </h2>
