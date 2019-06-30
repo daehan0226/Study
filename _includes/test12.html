@@ -1,8 +1,8 @@
 <div id="home">
-  <h2><i class="fa fa-bookmark"></i> Troubleshooting </h2>
+  <h2><i class="fa fa-bookmark"></i> Troubleshooting1 </h2>
   <ul id="blog-posts" class="posts">
     {% for post1 in site.posts %}
-      {% if post1.categories == 'python' %} python_post {% else %} No {% endif %}
+      {% if post1.categories == "python" %} python_post {% else %} No {% endif %}
       <li><span>{{ post1.date | date_to_string }} &raquo;</span><a href="{{ post1.url }}">{{ post1.title }} 카테고리{{ post1.categories }}</a></li>
     {% endfor %}
   </ul>
