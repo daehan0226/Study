@@ -3,9 +3,8 @@
   
   {% assign category = site.category | default: page.title %}
   {% for category in site.categories %}
-  {% for i in range(1,4) %} {{ i }} {% endfor %}
    <p>
-   <a class="sidebar-nav-item pl-3rem" onclick="fnMove('2')" style="cursor:pointer;">
+   <a class="sidebar-nav-item pl-3rem" onclick="fnMove({{category}})" style="cursor:pointer;">
                           <span class="name">
                               {{ category | first }}          <!-- 카테고리의 이름 -->
                           </span>
