@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Python_Crawling_Pymysql
-categories:
-- blog
+categories: PYTHON
+
 ---
 
 > # Python
