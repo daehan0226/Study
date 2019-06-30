@@ -3,6 +3,20 @@ layout: default
 title: Blog Posts
 ---
 
+
+
+<!--  카테고리 추가 시 화면에 출력 
+  <div id="home">
+    <h2><i id="div카테고리이름" class="fa fa-bookmark"></i> 카테고리이름 </h2>
+    <ul id="blog-posts" class="posts">
+      {% for post in site.posts %}
+        {% if post.categories contains "카테고리이름" %}
+        <li><span>{{ post.date | date_to_string }} &raquo;</span><a href="{{ post.url }}">{{ post.title }} _ {{ post.categories }}</a></li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </div>-->
+
   <div id="home">
     <h2><i id="divblog" class="fa fa-bookmark"></i> Study </h2>
     <ul id="blog-posts" class="posts">
