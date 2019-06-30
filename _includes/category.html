@@ -1,8 +1,8 @@
 <div>
 <ui class="posts-list">
   
-  {% assign category = page.category | default: page.title %}
-  {% for post in site.category[category] %}
+  {% assign category = site.category | default: page.title %}
+  {% for post in site.category %}
     <li>
       <h3>
         <a href="{{ post.url }}">
