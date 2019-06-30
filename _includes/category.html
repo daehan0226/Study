@@ -2,7 +2,9 @@
 <ui class="posts-list">
   
   {% assign category = site.category | default: page.title %}
+  <p>?</p>
   {% for category in site.category %}
+  <p>!</p>  
     <li>
       <h3>
         <a href="{{ category.url }}">
