@@ -2,10 +2,7 @@
 <ui class="posts-list">
   
   {% assign category = site.category | default: page.title %}
-  {{ site.category }}
-  <p>4</p>
   {% for category in site.categories %}
-  <p>!</p>  
    <a href="{{ site.category_dir }}#{{ category | first }}"
        class="sidebar-nav-item pl-3rem">
                           <span class="name">
@@ -13,14 +10,14 @@
                           </span>
       <span class="badge">{{ category | last | size }}</span>
     </a>
-    <li>
+    <!--<li>
       <h3>
         <a href="{{ category.url }}">
           {{ category.title }}
         </a>
-        <!--<small>{{ post.date | date_to_string }}</small>-->
+        <small>{{ post.date | date_to_string }}</small>
       </h3>
-    </li>
+    </li>-->
   {% endfor %}
   
 </ul>
