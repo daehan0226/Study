@@ -4,7 +4,7 @@ title: Blog Posts
 ---
 
   <div id="home">
-    <h2><i id="div1" class="fa fa-bookmark"></i> Study </h2>
+    <h2><i id="divblog" class="fa fa-bookmark"></i> Study </h2>
     <ul id="blog-posts" class="posts">
       {% for post in site.posts %}
         {% if post.categories contains "blog" %}
@@ -16,7 +16,7 @@ title: Blog Posts
 
 
   <div id="home">
-    <h2><i id="div2" class="fa fa-bookmark"></i> Python </h2>
+    <h2><i id="divpython" class="fa fa-bookmark"></i> Python </h2>
     <ul id="blog-posts" class="posts">
       {% for post in site.posts %}
         {% if post.categories contains "python" %}
@@ -27,7 +27,7 @@ title: Blog Posts
   </div>
 
   <div id="home">
-    <h2><i id="div3" class="fa fa-bookmark"></i> test </h2>
+    <h2><i id="divtest" class="fa fa-bookmark"></i> test </h2>
     <ul id="blog-posts" class="posts">
       {% for post in site.posts %}
         {% if post.categories contains "test" %}
