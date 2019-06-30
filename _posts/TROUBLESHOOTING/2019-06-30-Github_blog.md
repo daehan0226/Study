@@ -8,7 +8,7 @@ categories: TROUBLESHOOTING
  
  2019-06-30-Github_blog.md
 
- > #Error ?
+ > # Error 
 * Index.html 파일 내 특정 카테고리만 출력 시 if문 문법 에러 
 
 
@@ -22,18 +22,18 @@ categories: TROUBLESHOOTING
 
 
 
- > #Time spent to solve the issue	: 1 day
+ > # Time spent to solve the issue	: 1 day
 
- > #Link	
+ > # Link	
 * https://stackoverflow.com/questions/26661569/how-do-i-create-an-if-statement-based-on-a-jekyll-category
 
 
- > #Tried	
+ > # Tried	
 * (x) if post.cateories == blog 
 
 
 
 
- > #Wokred 
+ > # Wokred 
 * if post.categories **contains** "blog"
 
