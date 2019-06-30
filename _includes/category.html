@@ -2,7 +2,8 @@
 <ui class="posts-list">
   
   {% assign category = site.category | default: page.title %}
-  <p>?</p>
+  {{ category }}
+  <p>4</p>
   {% for category in site.category %}
   <p>!</p>  
     <li>
