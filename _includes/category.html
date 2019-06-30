@@ -5,7 +5,7 @@
   {% for category in site.categories %}
    <p>
    <a href="{{ site.category_dir }}#{{ category | first }}"
-       class="sidebar-nav-item pl-3rem">
+       class="sidebar-nav-item pl-3rem" onclick="fnMove('1')" style="cursor:pointer;">
                           <span class="name">
                               {{ category | first }}          <!-- 카테고리의 이름 -->
                           </span>
