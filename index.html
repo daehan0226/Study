@@ -2,21 +2,6 @@
 layout: default
 title: Blog Posts
 ---
-
-
-
-<!--  카테고리 추가 시 화면에 출력 
-  <div id="home" style="margin-bottom:30px;">
-    <h2><i id="div카테고리이름" class="fa fa-bookmark"></i> 카테고리이름 </h2>
-    <ul id="blog-posts" class="posts">
-      {% for post in site.posts %}
-        {% if post.categories contains "카테고리이름" %}
-        <li><span>{{ post.date | date_to_string }} &raquo;</span><a href="{{ post.url }}">{{ post.title }} _ {{ post.categories }}</a></li>
-        {% endif %}
-      {% endfor %}
-    </ul>
-  </div>-->
-
   <div id="home" style="margin-bottom:30px;">
     <div style="height:5px;"></div> <!-- Fixed navar 공간 -->
     <h2><i class="fa fa-bookmark"></i> Study </h2>
@@ -29,7 +14,7 @@ title: Blog Posts
     </ul>
   </div>
 
-<div id="divPYTHON" style="margin-top:20px;" >
+<div id="divPYTHON" style="padding-top:25px;" >
   <div id="home" style="margin-bottom:30px;">
     <h2><i class="fa fa-bookmark"></i> PYTHON </h2>
     <ul id="blog-posts" class="posts">
@@ -42,7 +27,7 @@ title: Blog Posts
   </div>
 </div>
 
-<div id="divLINUX" style="margin-top:20px;" >
+<div id="divLINUX" style="padding-top:25px;" >
   <div id="home" style="margin-bottom:30px;">
     <h2><i id="divLINUX" class="fa fa-bookmark"></i> LINUX </h2>
     <ul id="blog-posts" class="posts">
@@ -56,7 +41,7 @@ title: Blog Posts
 </div>  
 
  
-<div id="divTROUBLESHOOTING" style="margin-top:20px;" >
+<div id="divTROUBLESHOOTING" style="padding-top:25px;" >
   <div id="home" style="margin-bottom:30px;">
     <h2><i id="divTROUBLESHOOTING" class="fa fa-bookmark"></i> TROUBLESHOOTING </h2>
     <ul id="blog-posts" class="posts">
@@ -69,7 +54,7 @@ title: Blog Posts
   </div>
 </div>
 
-<div id="divELASTICSEARCH" style="margin-top:20px;" >
+<div id="divELASTICSEARCH" style="padding-top:25px;" >
   <div id="home" style="margin-bottom:30px;">
     <h2><i id="divELASTICSEARCH" class="fa fa-bookmark"></i> ELASTICSEARCH </h2>
     <ul id="blog-posts" class="posts">
@@ -82,12 +67,12 @@ title: Blog Posts
   </div>
 </div>
 
-<div id="divNETWORK" style="margin-top:20px;" >
+<div id="divNETWORK" style="padding-top:25px;" >          <!-- 카테고리 수정 -->
   <div id="home" style="margin-bottom:30px;">
-    <h2><i id="divNETWORK" class="fa fa-bookmark"></i> NETWORK </h2>
+    <h2><i id="divNETWORK" class="fa fa-bookmark"></i> NETWORK </h2>  <!-- 카테고리 수정(2개) -->
     <ul id="blog-posts" class="posts">
       {% for post in site.posts %}
-        {% if post.categories contains "NETWORK" %}
+        {% if post.categories contains "NETWORK" %}                    <!-- 카테고리 수정 -->
         <li><span>{{ post.date | date_to_string }} &raquo;</span><a href="{{ post.url }}">{{ post.title }}</a></li>
         {% endif %}
       {% endfor %}
