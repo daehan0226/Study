@@ -1,8 +1,8 @@
 ---
 layout: post
 title: matplotlib
-categories:
-- blog
+categories: PYTHON
+
 ---
 
 #  matplotlib [link1]
