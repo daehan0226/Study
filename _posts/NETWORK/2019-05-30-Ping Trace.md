@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Ping Trace
-categories:
-- blog
+categories: NETWORK
+
 ---
 
 > # Ping 
