@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Linux(1)_lsof
-categories:
-- blog
+title: Linux-lsof
+categories: LINUX
+
 ---
 * lsof
 
