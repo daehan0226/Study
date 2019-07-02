@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Python_time
-categories:
-- blog
+title: pytz(timezome)
+categories: PYTHON
+
 ---
 2019-06-19-Python_time.md
 
