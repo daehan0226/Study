@@ -7,6 +7,7 @@ categories: NETWORK
 
 ![20190702_143427](https://user-images.githubusercontent.com/47915302/60485033-8a601d80-9cd6-11e9-9bc3-883cffaf3365.png)
 
+(참고 링크 : http://www.fiber-optical-networking.com/unicast-vs-multicast-vs-broadcast-differences.html )
 
 > # Unicast
 
