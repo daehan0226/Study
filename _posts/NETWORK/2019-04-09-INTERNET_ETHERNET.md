@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Network
-categories:
-- blog
+title: INTERNET_ETHERNET
+categories: NETWORK
+
 ---
 
 > Ethernet
