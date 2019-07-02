@@ -28,8 +28,7 @@ categories: TROUBLESHOOTING
 4. 앱 비밀번호 설정 - 윈도우 메일
 
 
-> # Wokred 
- okay 
+> # Wokred   
 
 
 
