@@ -1,8 +1,8 @@
 ---
 layout: post
 title: JS_scrolldown
-categories:
-- blog
+categories: FrontEnd
+
 ---
 * 참고 : https://developer.mozilla.org/ko/docs/Web/API/Element/scrollIntoView
 
