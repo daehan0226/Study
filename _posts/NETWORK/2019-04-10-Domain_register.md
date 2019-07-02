@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Domain_register
-categories:
-- blog
+categories: NETWORK
+
 ---
 
 # https://www.freenom.com/en/index.html?lang=en
