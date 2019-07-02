@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Congestion_control,Flow_Control
-categories:
-- blog
+categories: NETWORK
+
 ---
 > TCP
 
