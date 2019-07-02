@@ -1,8 +1,8 @@
 ---
 layout: post
 title: smtp_error
-categories:
-- blog
+categories: TROUBLESHOOTING
+
 ---
 
 > 웹사이트에서 mail 보낼때 나온 에러
