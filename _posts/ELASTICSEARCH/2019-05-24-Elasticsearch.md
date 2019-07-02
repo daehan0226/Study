@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Elasticsearch
-categories:
-- blog
+categories: ELASTICSEARCH
+
 ---
 [참고]: 
 
