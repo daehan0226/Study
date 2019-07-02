@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Network(2)
-categories:
-- blog
+title: Gateway, Router
+categories: NETWORK
+
 ---
 
 > # Gateway 
