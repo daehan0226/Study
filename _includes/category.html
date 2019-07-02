@@ -3,7 +3,7 @@
   
   {% assign category = site.category | default: page.title %}
   {% for category in site.categories %}
-   <p>
+   <p style="margin-bottom:0;">
    <a class="sidebar-nav-item pl-3rem" onclick="fnMove('{{ category | first }}')" style="cursor:pointer;">
                           <span class="name">
                               {{ category | first }}          <!-- 카테고리의 이름 -->
