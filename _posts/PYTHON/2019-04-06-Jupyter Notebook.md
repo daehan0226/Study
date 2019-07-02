@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Jupyter Notebook
-categories:
-- blog
+categories: PYTHON
+
 ---
 ## Changing working directory in jupyter notebook. [ref]
 
