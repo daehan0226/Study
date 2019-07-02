@@ -1,8 +1,8 @@
 ---
 layout: post
-title: AWS-ELK
-categories:
-- blog
+title: Configuration
+categories: ELASTICSEARCH
+
 ---
 
 # 2019-06-02-AWS-ELK.md
