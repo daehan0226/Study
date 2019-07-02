@@ -25,6 +25,12 @@
     }
     </script>
   
+  
+  <script type="text/javascript">
+    $(window).scroll(function(){
+    $("#category_list").stop().animate({"marginTop": ($(window).scrollTop()) + "px", "marginLeft":($(window).scrollLeft()) + "px"}, "slow" );
+  });
+  </script>
 </head>
 <body>
   <div style="text-align: center; position: fixed; width: 100%; height: 30px; background-color: #2d3e50; z-index:4;">
