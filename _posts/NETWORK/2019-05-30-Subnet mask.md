@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Subnet mask
-categories:
-- blog
+categories: NETWORK
+
 ---
 
 > # Subnet mask
