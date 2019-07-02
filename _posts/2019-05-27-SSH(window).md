@@ -22,7 +22,7 @@ categories:
 * SSH connections have been used to secure many different types of communications between a local machine and a remote host, including secure remote access to resources, remote execution of commands, delivery of software patches and updates and other administrative or management tasks.
 
  - - -
- < To use SSH on window
+ < To use SSH on window >
  1. Port 22 has to be open
  2. SSH SERVER program is running (freesshd)
  
