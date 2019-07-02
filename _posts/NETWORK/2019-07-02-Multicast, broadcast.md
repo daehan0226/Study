@@ -4,7 +4,10 @@ title: Multicast, broadcast
 categories: NETWORK
 
 ---
-2019-07-02-Multicast, broadcast.md
+
+![20190702_143427](https://user-images.githubusercontent.com/47915302/60485033-8a601d80-9cd6-11e9-9bc3-883cffaf3365.png)
+
+
 
 > # Multicast
 
