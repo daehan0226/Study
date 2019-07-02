@@ -1,8 +1,8 @@
 ---
 layout: post
-title: ELK-K
-categories:
-- blog
+title: ELK-Kibana
+categories: ELASTICSEARCH
+
 ---
 
 2019-06-01-ELK-K.md
