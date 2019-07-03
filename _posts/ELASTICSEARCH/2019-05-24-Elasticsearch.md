@@ -21,9 +21,11 @@ categories: ELASTICSEARCH
 * E.g)  PUT /customer(index)/external(type)/1(id)?pretty 
 
       { 
-       "name" : "John Doe"         - documnet
+       "name" : "John Doe"         - document
       }
 
+* document 를 추가하는 시  { "name" : "AAA" } JSON 형태로 추가
+* 검색 시 특정 INDEX의 document 을 검색함
 
 
 * 엘라스틱서치 설치 https://www.elastic.co/kr/downloads/elasticsearch  / 
