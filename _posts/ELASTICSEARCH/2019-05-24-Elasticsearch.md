@@ -4,7 +4,27 @@ title: Elasticsearch
 categories: ELASTICSEARCH
 
 ---
-[참고]: 
+[참고]
+
+
+* Elasticsearch - RDMS
+* INDEX - Database
+* Type - Table
+* Document - Row
+* Field - Column
+* Mapping - Schema
+* Get - Select
+* Put - Update
+* Post - Insert
+* Delete - Delete
+
+* E.g)  PUT /customer(index)/external(type)/1(id)?pretty 
+
+      { 
+       "name" : "John Doe"         - documnet
+      }
+
+
 
 * 엘라스틱서치 설치 https://www.elastic.co/kr/downloads/elasticsearch  / 
 * **에러** 버전 7.0(에러) --> 6.3 
