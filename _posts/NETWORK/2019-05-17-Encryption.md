@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Encryption
-categories:
-- blog
+categories: NETWORK
+
 ---
 
 > # Encryption
