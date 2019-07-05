@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Encoding_Decoding
-categories:
-- blog
+categories: OS
+
 ---
 
 > Encoding_Decoding
