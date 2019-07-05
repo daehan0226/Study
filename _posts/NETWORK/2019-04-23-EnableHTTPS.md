@@ -1,8 +1,8 @@
 ---
 layout: post
 title: EnableHTTPS
-categories:
-- blog
+categories: NETWORK
+
 ---
 
 1. Go to https://letsencrypt.org/ 
