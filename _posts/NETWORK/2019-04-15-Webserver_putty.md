@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Webserver-putty
-categories:
-- blog
+categories: NETWORK
+
 ---
 
 # Webserver-putty
