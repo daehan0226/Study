@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Blueprint
-categories:
-- blog
+categories: PYTHON
+
 ---
 
 2019-05-30-Blueprint.md
