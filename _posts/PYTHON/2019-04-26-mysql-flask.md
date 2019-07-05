@@ -1,8 +1,8 @@
 ---
 layout: post
 title: mysql-flask
-categories:
-- blog
+categories: PYTHON
+
 ---
 
 1. 설치
