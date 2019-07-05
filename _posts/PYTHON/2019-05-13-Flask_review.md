@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Flask_review
-categories:
-- blog
+categories: PYTHON
+
 ---
 
 
