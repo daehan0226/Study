@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Subdomain
-categories:
-- blog
+categories: NETWORK
+
 ---
 [set_port]
 
