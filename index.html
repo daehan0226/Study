@@ -4,9 +4,9 @@ title: Blog Posts
 ---
 
 
-<div id="divPYTHON">
-  <div id="home" style="margin-bottom:20px;">
-    <h2><i class="fa fa-bookmark"></i> PYTHON </h2>
+<div>
+  <div id="home" style="margin-top:20px;">
+    <h2><i id="divPYTHON" class="fa fa-bookmark"></i> PYTHON </h2>
     <ul id="blog-posts" class="posts">
       {% for post in site.posts %}
         {% if post.categories contains "PYTHON" %}
@@ -109,6 +109,7 @@ title: Blog Posts
   </div>
 </div>
 
+<div id="divblog" style="padding-top:30px;" >
   <div id="home" style="margin-top:30px;">
     <h2><i class="fa fa-bookmark"></i> Study </h2>
     <ul id="blog-posts" class="posts">
@@ -119,3 +120,4 @@ title: Blog Posts
       {% endfor %}
     </ul>
   </div>
+</div>
