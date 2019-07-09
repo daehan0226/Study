@@ -18,3 +18,4 @@ categories: JS
 * sudo npm install mysql 
 * sudo npm install express
 
+# npm start 
