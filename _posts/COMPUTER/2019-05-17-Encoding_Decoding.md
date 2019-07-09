@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Encoding_Decoding
-categories: OS
+categories: COMPUTER
 
 ---
 
