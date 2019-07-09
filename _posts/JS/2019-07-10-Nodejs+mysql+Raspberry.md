@@ -27,3 +27,12 @@ categories: JS
 * sudo npm supervisor --g (전역에 설치하여 다른 디렉토리에서도 사용 가능)
 * sudo nano package.json 의 start 값 변경 = node  00.js -> supervisor 00.js
 * 실행 = supervisor 00.js 
+
+
+
+# nodejs 백그라운드 실행 
+- https://tom7930.tistory.com/26
+- http://son10001.blogspot.com/2016/01/nodejs.html
+- https://kamang-it.tistory.com/entry/Packageforever%EA%B3%BC-nodejs-%EB%8D%B0%EB%AA%AC%EB%B0%B1%EA%B7%B8%EB%9D%BC%EC%9A%B4%EB%93%9C%EC%9C%BC%EB%A1%9C-%EC%8B%A4%ED%96%89
+
+![20190710_020928](https://user-images.githubusercontent.com/47915302/60908894-e5d27280-a2b7-11e9-8090-90eba025f5d1.png)
