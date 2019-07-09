@@ -19,3 +19,11 @@ categories: JS
 * sudo npm install express
 
 # npm start 
+
+
+
+
+# 수정사항 자동 업데이트 - supervisor
+* sudo npm supervisor --g (전역에 설치하여 다른 디렉토리에서도 사용 가능)
+* sudo nano package.json 의 start 값 변경 = node  00.js -> supervisor 00.js
+* 실행 = supervisor 00.js 
