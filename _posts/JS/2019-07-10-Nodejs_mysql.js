@@ -5,7 +5,31 @@ categories: JS
 
 ---
 
+
+* cmd 
+ 1. npm init -y  // npm 설치
+ 2. npm install express
+ 3. npm install -S mysql  // mysql 설치 
+
  
+ * package.json 수정
+   {
+    "name": "nodejs",
+    "version": "1.0.0",
+    "description": "",
+    **"main": "express_dh.js"**,
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1",
+      **"start": "node express_dh.js"**
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+      "express": "^4.17.1",
+      "mysql": "^2.17.1"
+    }
+  }
   
 
         var express = require('express');
@@ -42,3 +66,6 @@ categories: JS
         });
 
 
+
+    
+> run 'npm start' in the directory 
