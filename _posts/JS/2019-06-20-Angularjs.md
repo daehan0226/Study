@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Angularjs
-categories: FrontEnd
+categories: JS
 
 ---
 2019-06-20-Angularjs.md
