@@ -5,6 +5,12 @@ categories: JS
 
 ---
 
+ 참고링크1 : https://poiemaweb.com/nodejs-mysql
+ 참고링크2 : https://www.opentutorials.org/course/3347/21185
+ 참고링크3 : https://m.blog.naver.com/PostView.nhn?blogId=wlsdml1103&logNo=221160152394&proxyReferer=https%3A%2F%2Fwww.google.com%2F
+ 에러(npm start) : https://techoverflow.net/2019/04/01/how-to-fix-npm-err-missing-script-start/
+ 
+ 
 
 * cmd 
  1. npm init -y  // npm 설치
