@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Proxy_vs_Gateway
+title: Proxy_Gateway
 categories: NETWORK
 
 ---
