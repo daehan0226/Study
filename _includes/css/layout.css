@@ -22,6 +22,7 @@
 @media only screen and (min-width: 768px) and (max-width: 959px) {
 	nav {
 		width: 160px; }
+	.sidebar { display: none;}
 	.sidebar h2 {
 		font-size: 18px;
 	}
