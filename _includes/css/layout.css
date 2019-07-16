@@ -9,10 +9,8 @@
 
 /* */
 /* Smaller than standard 960 (devices and browsers) */
-@media only screen and (max-width: 1100px) {
-	.sidebar {
-		display: none;
-	}
+@media only screen and (max-width: 959px) {
+
 	#logo {
 		font-size: 21px;
 		margin-bottom: 15px; }
@@ -42,9 +40,6 @@
 	nav { position: relative; }
 	nav ul,
 	#logo { text-align: left; }
-	.sidebar {
-		display: none;
-	}
 	.content {
 		border: 0px;
 		padding-left: 0px;
@@ -56,10 +51,6 @@
 
 /* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
 @media only screen and (min-width: 480px) and (max-width: 767px) {
-	.sidebar {
-		display: none;
-	}
-
 	h1 {
 		font-size: 28px;
 		line-height: 36px;
@@ -71,10 +62,6 @@
 
 /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
 @media only screen and (max-width: 479px) {
-	.sidebar {
-		display: none;
-	}
-
 	h1 {
 		font-size: 24px;
 		line-height: 32px;
