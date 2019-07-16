@@ -39,9 +39,10 @@
 	header h1 { font-size: 34px; line-height: 37px; }
 	nav { position: relative; }
 	nav ul,
-	.sidebar { display: none;}
+	/* .sidebar { display: none;} */
 	#logo { text-align: left; }
 	.content {
+		clear: both;
 		border: 0px;
 		padding-left: 0px;
 	}
