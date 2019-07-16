@@ -31,6 +31,9 @@ _cf) 메모리에 프로그램이 너무 많이 올라가도, 너무 적게 올�
 
 </br>
 
+![Long-term-scheduler-vs-short-term-scheduler](https://user-images.githubusercontent.com/47915302/61301438-d656aa80-a81e-11e9-892c-e9037ef02912.png)
+(figure link : https://www.jobduniya.com/Private-Companies/3i-Infotech/Fully-Solved-Papers/Topic-Basic-CS-8/Subtopic-Operating-System-2/Part-6.html )
+
 ### 단기스케줄러(Short-term scheduler or CPU scheduler)
 
 * CPU 와 메모리 사이의 스케줄링을 담당.
@@ -53,8 +56,6 @@ _cf) 메모리에 프로그램이 너무 많이 올라가도, 너무 적게 올�
 #### Process state - suspended
 
 Suspended(stopped) : 외부적인 이유로 프로세스의 수행이 정지된 상태로 메모리에서 내려간 상태를 의미한다. 프로세스 전부 디스크로 swap out 된다. blocked 상태는 다른 I/O 작업을 기다리는 상태이기 때문에 스스로 ready state 로 돌아갈 수 있지만 이 상태는 외부적인 이유로 suspending 되었기 때문에 스스로 돌아갈 수 없다.
-
-[뒤로](https://github.com/JaeYeopHan/for_beginner)/[위로](#part-1-4-운영체제)
 
 </br>
 
