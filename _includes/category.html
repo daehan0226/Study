@@ -3,21 +3,13 @@
   
   {% assign category = site.category | default: page.title %}
   {% for category in site.categories %}
-   <p style="margin-bottom:0;">
+   <p style="margin-bottom:0; text-align:center;">
    <a class="sidebar-nav-item pl-3rem" onclick="fnMove('{{ category | first }}')" style="cursor:pointer;">
                           <span class="name">
                               {{ category | first }}          <!-- 카테고리의 이름 -->
                           </span>
       <span class="badge">{{ category | last | size }}</span> <!-- 해당 카테고리의 갯수 -->
     </a></p>
-    <!--<li>
-      <h3>
-        <a href="{{ category.url }}">
-          {{ category.title }}
-        </a>
-        <small>{{ post.date | date_to_string }}</small>
-      </h3>
-    </li>-->
   {% endfor %}
   
 </ul>
