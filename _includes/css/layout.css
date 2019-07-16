@@ -23,8 +23,7 @@
 @media only screen and (max-width: 959px) {
 	nav {
 		width: 160px; }
-	.sidebar { width: 40%;}
-	.content { float: right; width: 50%;}
+
 	.sidebar h2 {
 		font-size: 18px;
 	}
