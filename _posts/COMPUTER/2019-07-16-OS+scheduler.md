@@ -31,7 +31,7 @@ _프로세스를 스케줄링하기 위한 Queue 에는 세 가지 종류가 존
 
 _cf) 메모리에 프로그램이 너무 많이 올라가도, 너무 적게 올라가도 성능이 좋지 않은 것이다. 참고로 time sharing system 에서는 장기 스케줄러가 없다. 그냥 곧바로 메모리에 올라가 ready 상태가 된다._
 
-</br>
+
 
 ![Long-term-scheduler-vs-short-term-scheduler](https://user-images.githubusercontent.com/47915302/61301438-d656aa80-a81e-11e9-892c-e9037ef02912.png)
 (figure link : https://www.jobduniya.com/Private-Companies/3i-Infotech/Fully-Solved-Papers/Topic-Basic-CS-8/Subtopic-Operating-System-2/Part-6.html )
@@ -44,7 +44,7 @@ _cf) 메모리에 프로그램이 너무 많이 올라가도, 너무 적게 올�
 * 프로세스의 상태  
   ready -> running -> waiting -> ready
 
-</br>
+
 
 ### 중기스케줄러(Medium-term scheduler or Swapper)
 
@@ -60,7 +60,6 @@ _cf) 메모리에 프로그램이 너무 많이 올라가도, 너무 적게 올�
 
 Suspended(stopped) : 외부적인 이유로 프로세스의 수행이 정지된 상태로 메모리에서 내려간 상태를 의미한다. 프로세스 전부 디스크로 swap out 된다. blocked 상태는 다른 I/O 작업을 기다리는 상태이기 때문에 스스로 ready state 로 돌아갈 수 있지만 이 상태는 외부적인 이유로 suspending 되었기 때문에 스스로 돌아갈 수 없다.
 
-</br>
 
 ---
 
@@ -81,7 +80,6 @@ _스케줄링 대상은 Ready Queue 에 있는 프로세스들이다._
 * convoy effect  
   소요시간이 긴 프로세스가 먼저 도달하여 효율성을 낮추는 현상이 발생한다.
 
-</br>
 
 ### SJF(Shortest - Job - First)
 
@@ -95,7 +93,6 @@ _스케줄링 대상은 Ready Queue 에 있는 프로세스들이다._
 * starvation  
   효율성을 추구하는게 가장 중요하지만 특정 프로세스가 지나치게 차별받으면 안되는 것이다. 이 스케줄링은 극단적으로 CPU 사용이 짧은 job 을 선호한다. 그래서 사용 시간이 긴 프로세스는 거의 영원히 CPU 를 할당받을 수 없다.
 
-</br>
 
 ### SRT(Shortest Remaining time First)
 
@@ -109,8 +106,6 @@ _스케줄링 대상은 Ready Queue 에 있는 프로세스들이다._
 
 * starvation
 * 새로운 프로세스가 도달할 때마다 스케줄링을 다시하기 때문에 CPU burst time(CPU 사용시간)을 측정할 수가 없다.
-
-</br>
 
 ### Priority Scheduling
 
@@ -133,7 +128,6 @@ _스케줄링 대상은 Ready Queue 에 있는 프로세스들이다._
 * aging  
   아무리 우선순위가 낮은 프로세스라도 오래 기다리면 우선순위를 높여주자.
 
-</br>
 
 ### Round Robin
 
@@ -157,5 +151,3 @@ _스케줄링 대상은 Ready Queue 에 있는 프로세스들이다._
 설정한 `time quantum`이 너무 커지면 `FCFS`와 같아진다.
 또 너무 작아지면 스케줄링 알고리즘의 목적에는 이상적이지만 잦은 context switch 로 overhead 가 발생한다.
 그렇기 때문에 적당한 `time quantum`을 설정하는 것이 중요하다.
-
-</br>
