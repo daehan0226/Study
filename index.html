@@ -6,8 +6,7 @@ title: Blog Posts
 
 <div>
   <div id="home" style="margin-top:20px;">
-    <h2><i class="fa fa-bookmark"></i><button class="collapsible"> PYTHON </button> </h2>
-    <div class="content_fold">
+    <h2><i class="fa fa-bookmark"></i> PYTHON  </h2>
       <ul id="blog-posts" class="posts">
         {% for post in site.posts %}
           {% if post.categories contains "PYTHON" %}
@@ -15,7 +14,6 @@ title: Blog Posts
           {% endif %}
         {% endfor %}
       </ul>
-    </div>  
   </div>
 </div>
 
