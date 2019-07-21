@@ -31,6 +31,24 @@
     $("#category_list").stop().animate({"marginTop": ($(window).scrollTop()) + "px", "marginLeft":($(window).scrollLeft()) + "px"}, "slow" );
   });
   </script>
+  <script type="text/javascript">
+    var coll = document.getElementsByClassName("title");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.display === "block") {
+          content.style.display = "none";
+        } else {
+          content.style.display = "block";
+        }
+      });
+    }
+  </script>  
+  
+  
 </head>
 <body>
   <div style="text-align: center; position: fixed; width: 100%; height: 30px; background-color: #2d3e50; z-index:4;">
