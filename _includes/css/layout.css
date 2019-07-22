@@ -44,6 +44,7 @@
 	.sidebar { display: none;}
 	#logo { text-align: left; }
 	.content {
+		width: 95%;
 		clear: both;
 		border: 0px;
 		padding-left: 0px;
@@ -58,6 +59,9 @@
 	h1 {
 		font-size: 24px;
 		line-height: 32px;
+	}
+	.content {
+		width: 95%;
 	}
 
 	h2 {
