@@ -10,54 +10,79 @@ categories: PYTHON
 * [참고 링크2]
 
 
-* 프로젝트명 : deploy_test
+* 환경 : python3 nginx 이 깔린 상태
+
+* 프로젝트명 : home/daehan/test/ 디렉토리에 deploy_test
 
 * 퍼블릭 ip 주소 확인 ( 도매인 구매 )
-* 파이썬3, 가상환경, nginx, gunicorn 설치 sudo apt-get install python3-dev python3-pip python3-venv nginx 
-* 가상환경 - 장고 프로젝트 생성 
-* deploy_test/setting.pyy
 
 
-    ALLOWED_HOSTS = [ ' * ' ]
-    STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
+* /test python3 -m venv env
+* /test mkdir config
+* /test mkdir log 
+* /test cd log 
+* /test/log touch access.log error.log
+* /test/log cd ..
+* /test source env/bin/activate
+* (env) pip install django gunicorn
+* (env) django-admin startproject deploy_test
+* (env) sudo nano deploy_test/deploy_test/seeting.py
+
+            ALLOWED_HOSTS = ['*']
+            STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 
 * python manage.py makemigrations 
 * python manage.py migrate
 * python manage.py collectstatic  ( static 디렉토리 생성 )
 * python manage.py runserver  (로컬)
 
+* 
 * gunicron 연동
-* gunicorn --bind 0.0.0.0:8000 deploy_test.wsgi:application
+* gunicorn --bind 0.0.0.0:8000 (or 8001 ~) deploy_test.wsgi:application
+* 다른 ssh 창에서 curl -i http:localhost:8001 로 연결 확인 가능 
 
 
-* gunicorn.service   ( /etc/systemd/system/gunicorn.service )
-
-
+* gunicorn.service   ( /etc/systemd/system/gunicorn.service  // /home/daehan/test/config )
+        
         [Unit]
         Description=gunicorn daemon
         After=network.target
 
         [Service]
-        User=daehan   [사용자id - 커널 ]
+        User=daehan   # 커널창 사용자
         Group=www-data
-        WorkingDirectory=/home/daehan/project/deploy_test    ( 프로젝트 위치 )
-        ExecStart=/home/daehan/project/env/bin/gunicorn --workers 3 --bind unix:/home/daehan/project/config/deploy_test.sock    deploy_test.wsgi:application
+        WorkingDirectory=/home/daehan/test/deploy_test  # 프로젝트 디렉토리 (현재 내부에 deploy_test manage.py static db.sqlite3 있음)
+        ExecStart=/home/daehan/test/env/bin/gunicorn --workers 3 --bind unix:/home/daehan/test/config/deploy_test.sock deploy_test.wsgi:application
 
         [Install]
         WantedBy=multi-user.target
 
 
-
-* config(deploy_test.soket, deploy_test.conf(nginx), gunicorn.service ) log(access, error) 디렉토리 생성  
-* 생성후 /etc/nginx/sites-enable/   , /etc/systemd/sytem/ 각각 이동 
-*
-
-* deploy_test.conf
+* deploy_test.conf  ( /etc/nginx/sites-enabled/deploy_test.conf  // /home/daehan/test/config/deploy_test.conf)
 
 
-* gunicorn.service
+        server {
+                # the port your site will be served on
+                listen 80;
 
- 
+                # the domain name it will serve for
+                server_name     test.patenttrends.ga; # 여기에 도메인 주소를 적는다
+                charset         utf-8;
+
+                access_log      /home/daehan/test/log/access.log;
+                error_log       /home/daehan/test/log/error.log;
+
+                location /static/ { # STATIC_URL
+                    alias /home/daehan/test/deploy_test/static/; # STATIC_ROOT
+                    expires 30d;
+                }
+
+                location / {
+                    include proxy_params;
+                    proxy_pass http://unix:/home/daehan/test/config/patent.sock;
+                }
+        }
+
 
 * sudo nginx -t 
 * sudo systemctl start nginx
