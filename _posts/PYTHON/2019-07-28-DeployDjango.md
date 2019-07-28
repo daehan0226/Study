@@ -6,8 +6,8 @@ categories: PYTHON
 ---
 
 
-[참고 링크1]
-[참고 링크2]
+* [참고 링크1]
+* [참고 링크2]
 
 
 * 프로젝트명 : deploy_test
@@ -16,7 +16,36 @@ categories: PYTHON
 * 파이썬3, 가상환경, nginx, gunicorn 설치 sudo apt-get install python3-dev python3-pip python3-venv nginx 
 * 가상환경 - 장고 프로젝트 생성 
 * deploy_test/setting.pyy
-* ALLOWED_HOSTS = [ ' * ' ]
+
+
+    ALLOWED_HOSTS = [ ' * ' ]
+    STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
+
+* python manage.py makemigrations 
+* python manage.py migrate
+* python manage.py collectstatic  ( static 디렉토리 생성 )
+* python manage.py runserver  (로컬)
+
+* gunicron 연동
+* gunicorn --bind 0.0.0.0:8000 deploy_test.wsgi:application
+
+
+* gunicorn.service   ( /etc/systemd/system/gunicorn.service )
+
+
+        [Unit]
+        Description=gunicorn daemon
+        After=network.target
+
+        [Service]
+        User=daehan   [사용자id - 커널 ]
+        Group=www-data
+        WorkingDirectory=/home/daehan/project/deploy_test    ( 프로젝트 위치 )
+        ExecStart=/home/daehan/project/env/bin/gunicorn --workers 3 --bind unix:/home/daehan/project/config/deploy_test.sock    deploy_test.wsgi:application
+
+        [Install]
+        WantedBy=multi-user.target
+
 
 
 * config(deploy_test.soket, deploy_test.conf(nginx), gunicorn.service ) log(access, error) 디렉토리 생성  
