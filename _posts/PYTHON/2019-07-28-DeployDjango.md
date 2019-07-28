@@ -38,6 +38,12 @@ categories: PYTHON
 * python manage.py runserver  (로컬)
 
 
+
+# git 
+* 로컬 - 수정 - git commit - git push
+* 서버 - git pull - sudo service gunicorn restart, sudo service nginx resart
+
+
 # gunicorn, nginx 설정    ( 이미 gunicorn 있으므로 gunicorn1 로 작성 )
 
 * gunicron 연동
