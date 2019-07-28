@@ -38,7 +38,7 @@ categories: PYTHON
 * python manage.py runserver  (로컬)
 
 
-# gunicorn, nginx 설정    ( 이미 guniconr 있으므로 gunicorn1 로 작성 )
+# gunicorn, nginx 설정    ( 이미 gunicorn 있으므로 gunicorn1 로 작성 )
 
 * gunicron 연동
 * gunicorn --bind 0.0.0.0:8000 (or 8001 ~) deploy_test.wsgi:application
