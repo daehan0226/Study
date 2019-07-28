@@ -41,11 +41,11 @@ categories: PYTHON
 # gunicorn, nginx 설정    ( 이미 gunicorn 있으므로 gunicorn1 로 작성 )
 
 * gunicron 연동
-* gunicorn --bind 0.0.0.0:8000 (or 8001 ~) deploy_test.wsgi:application
-* 다른 ssh 창에서 curl -i http:localhost:8001 로 연결 확인 가능 
+  * gunicorn --bind 0.0.0.0:8000 (or 8001 ~) deploy_test.wsgi:application
+  * 다른 ssh 창에서 curl -i http:localhost:8001 로 연결 확인 가능 
 
 
-* **gunicorn1**.service   ( ln -s /etc/systemd/system/gunicorn1.service /home/daehan/test/config/gunicorn1.service )
+  * **gunicorn1**.service   ( ln -s /etc/systemd/system/gunicorn1.service /home/daehan/test/config/gunicorn1.service )
         
         [Unit]
         Description=gunicorn daemon
@@ -61,14 +61,13 @@ categories: PYTHON
         WantedBy=multi-user.target
 
 
-* sudo systemctl status **gunicorn1**    
-* sudo systemctl daemon-reload 
-* sudo systemctl restart **gunicorn1**
-* sudo systemctl enable **gunicorn1**   -> .sock 생성
-* **Created symlink from /etc/systemd/system/multi-user.target.wants/gunicorn1.service to /etc/systemd/system/gunicorn1.service.**
+  * sudo systemctl status **gunicorn1**    
+  * sudo systemctl daemon-reload 
+  * sudo systemctl restart **gunicorn1**
+  * sudo systemctl enable **gunicorn1**   -> .sock 생성 =  **Created symlink from /etc/systemd/system/multi-user.target.wants/gunicorn1.service to /etc/systemd/system/gunicorn1.service.**
 
-
-* deploy_test.conf  ( ln -s /etc/nginx/sites-enabled/deploy_test.conf /home/daehan/test/config/deploy_test.conf)
+* nginx
+  * deploy_test.conf  ( ln -s /etc/nginx/sites-enabled/deploy_test.conf /home/daehan/test/config/deploy_test.conf)
 
 
         server {
@@ -94,11 +93,11 @@ categories: PYTHON
         }
 
 
-* sudo nginx -t 
-* sudo systemctl restart nginx
-* sudo systemctl enable nginx
+  * sudo nginx -t 
+  * sudo systemctl restart nginx
+  * sudo systemctl enable nginx
 
-- 접속!
+- 배포 성공!
 
 
 * 실수 1. ip 주소 - nginx conf 아이피 주소는 **공인 IP 주소** 로 (서버 접속용 IP와 다름)
