@@ -16,6 +16,7 @@ categories: PYTHON
 
 * 퍼블릭 ip 주소 확인 ( 도매인 구매 )
 
+# 프로젝트 설정 
 
 * /test python3 -m venv env
 * /test mkdir config
@@ -36,13 +37,15 @@ categories: PYTHON
 * python manage.py collectstatic  ( static 디렉토리 생성 )
 * python manage.py runserver  (로컬)
 
-* 
+
+# gunicorn, nginx 설정
+
 * gunicron 연동
 * gunicorn --bind 0.0.0.0:8000 (or 8001 ~) deploy_test.wsgi:application
 * 다른 ssh 창에서 curl -i http:localhost:8001 로 연결 확인 가능 
 
 
-* gunicorn.service   ( /etc/systemd/system/gunicorn.service  // /home/daehan/test/config )
+* gunicorn.service   ( ln -s /etc/systemd/system/gunicorn.service /home/daehan/test/config )
         
         [Unit]
         Description=gunicorn daemon
@@ -58,7 +61,14 @@ categories: PYTHON
         WantedBy=multi-user.target
 
 
-* deploy_test.conf  ( /etc/nginx/sites-enabled/deploy_test.conf  // /home/daehan/test/config/deploy_test.conf)
+
+* sudo systemctl daemon-reload 
+* sudo systemctl start gunicorn
+* sudo systemctl enable gunicorn
+* sudo systemctl status gunicorn 
+
+
+* deploy_test.conf  ( ln -s /etc/nginx/sites-enabled/deploy_test.conf /home/daehan/test/config/deploy_test.conf)
 
 
         server {
@@ -85,20 +95,12 @@ categories: PYTHON
 
 
 * sudo nginx -t 
-* sudo systemctl start nginx
+* sudo systemctl restart nginx
+* sudo systemctl enable nginx
 
-* 
-*
-*
 
 * 실수 1. ip 주소 - nginx conf 아이피 주소는 **공인 IP 주소** 로 (서버 접속용 IP와 다름)
 * Nginx - gunicorn / sock 파일 필요 
-*
-
-
-
-
-
 
 
 
