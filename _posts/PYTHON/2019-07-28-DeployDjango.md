@@ -39,9 +39,7 @@ categories: PYTHON
 
 
 
-# git 
-* 로컬 - 수정 - git commit - git push
-* 서버 - git pull - sudo service gunicorn restart, sudo service nginx resart
+
 
 
 # gunicorn, nginx 설정    ( 이미 gunicorn 있으므로 gunicorn1 로 작성 )
@@ -61,7 +59,9 @@ categories: PYTHON
         User=daehan   # 커널창 사용자
         Group=www-data
         WorkingDirectory=/home/daehan/test/deploy_test  # 프로젝트 디렉토리 (현재 내부에 deploy_test manage.py static db.sqlite3 있음)
-        ExecStart=/home/daehan/test/env/bin/gunicorn --workers 3 --bind unix:/home/daehan/test/config/deploy_test.sock deploy_test.wsgi:application
+        ExecStart=/home/daehan/test/env/bin/gunicorn --workers 3 --bind unix:/home/daehan/test/config/deploy_test.sock deploy_test.wsgi:application (x)
+        
+        ExecStart=/home/daehan/test/env/bin/gunicorn --workers 3 --bind unix:/home/daehan/test/deploy_test(프로젝트 이름)/deploy_test.sock deploy_test.wsgi:application (0)
 
         [Install]
         WantedBy=multi-user.target
@@ -94,7 +94,9 @@ categories: PYTHON
 
                 location / {
                     include proxy_params;
-                    proxy_pass http://unix:/home/daehan/test/config/deploy_test.sock;
+                    proxy_pass http://unix:/home/daehan/test/config/deploy_test.sock;(x)
+                    proxy_pass http://unix:/home/daehan/test/deploy_test(프로젝트안)/deploy_test.sock;(x)
+                    
                 }
         }
 
@@ -107,7 +109,16 @@ categories: PYTHON
 
 
 * 실수 1. ip 주소 - nginx conf 아이피 주소는 **공인 IP 주소** 로 (서버 접속용 IP와 다름)
-* Nginx - gunicorn / sock 파일 필요 
+* Nginx - gunicorn / sock 파일 필요  
+
+# **에러 : sock 파일은 wsig, setting 파일이 있는 곳에 생성되게 path 설정!!!!!! 
+
+
+# git 
+
+* 로컬 - 수정 - git commit - git push
+
+* 서버 - git pull - sudo systemctl restart/enable gunicorn  (**gunicorn.service 아님**), sudo sudo systemctl restart/enable nginx
 
 
 
