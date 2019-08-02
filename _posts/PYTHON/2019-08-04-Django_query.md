@@ -36,7 +36,7 @@ categories: PYTHON
 ---
 
 
-* ipc 의 중복된 부분 삭제 - app_id 를 가지는 데이터 중 ipc 값이 같은 것 제거
+* ipc 의 중복된 부분 삭제 - app_id 를 가지는 데이터 중 ipc 값이 같은 것 제거  - 비추천
 x = Patent.obejcts.all()
 
 for y in x:
@@ -48,3 +48,14 @@ for y in x:
         else:
             l.delete()
 
+
+
+
+---
+# db 초기화
+
+1. 해당 appname 안의 migrstions 디렉토리내 [__init__.py] 제외하고 전부 삭제 
+2. python manage.py flush 
+3. python manage.py makemigrations appname
+4. python manage.py migrate
+5. 해당 db 안에 superuser 가 저정되었다면 python manage.py createsuperuser 실행 
