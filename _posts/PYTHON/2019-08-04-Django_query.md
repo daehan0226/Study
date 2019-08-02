@@ -37,16 +37,18 @@ categories: PYTHON
 
 
 * ipc 의 중복된 부분 삭제 - app_id 를 가지는 데이터 중 ipc 값이 같은 것 제거  - 비추천
-x = Patent.obejcts.all()
 
-for y in x:
-    z = Patent_ipc.objects.filter(app_id=y)
-    k = []
-    for l in z:
-        if not l in k:
-            k.append(l)
-        else:
-            l.delete()
+
+        x = Patent.obejcts.all()
+
+        for y in x:
+            z = Patent_ipc.objects.filter(app_id=y)
+            k = []
+            for l in z:
+                if not l in k:
+                    k.append(l)
+                else:
+                    l.delete()
 
 
 
