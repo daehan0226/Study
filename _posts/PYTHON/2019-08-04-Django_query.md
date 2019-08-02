@@ -27,15 +27,16 @@ categories: PYTHON
   
     * app_id__in= Patent 의 객체
     * applicant_year = Patent_applicant.objects.filter(applicant=applicant, app_id__in=Patent.objects.filter(application_date_year=year))
+  
   * applicant_year_count = applicant_year.count()
   * context['applicant_year_count'], context['applicant'], context['year'] = applicant_year_count, applicant, year
 
 
 
+---
 
 
-"""
-# ipc 의 중복된 부분 삭제 - app_id 를 가지는 데이터 중 ipc 값이 같은 것 제거
+* ipc 의 중복된 부분 삭제 - app_id 를 가지는 데이터 중 ipc 값이 같은 것 제거
 x = Patent.obejcts.all()
 
 for y in x:
@@ -46,4 +47,4 @@ for y in x:
             k.append(l)
         else:
             l.delete()
-"""
+
