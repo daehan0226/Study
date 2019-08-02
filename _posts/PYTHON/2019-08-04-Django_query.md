@@ -16,20 +16,21 @@ categories: PYTHON
   * Patent_status의 컬럼 status = Patent_status__status
   * Patent_ipc 의 컬럼 ipc = Patent_ipc__ipc 
 
-* queryset = Patent.objects.filter(application_number=app_n).values('title', 'application_number', 'application_date_year', 'application_date_day', 'application_date_month', 'patent_applicant__applicant', 'patent_status__status', 'patent_ipc__ipc')
+    * 원하는 컬럼들을 values 에 넣음
+    * queryset = Patent.objects.filter(application_number=app_n).values('title', 'application_number', 'application_date_year', 'application_date_day', 'application_date_month', 'patent_applicant__applicant', 'patent_status__status', 'patent_ipc__ipc')
 
 
+---
 
-"""
-# input = year, applicant (html-form)
-year, applicant = data['year'], data['applicant']
-applicant_year = Patent_applicant.objects.filter(applicant=applicant, app_id__in=Patent.objects.filter(application_date_year=year))
-applicant_year_count = applicant_year.count()
-context['applicant_year_count'] = applicant_year_count
-context['applicant'] = applicant
-context['year'] = year
+*  input = year, applicant (html-form)
+  * year, applicant = data['year'], data['applicant']
+  
+    * app_id__in= Patent 의 객체
+    * applicant_year = Patent_applicant.objects.filter(applicant=applicant, app_id__in=Patent.objects.filter(application_date_year=year))
+  * applicant_year_count = applicant_year.count()
+  * context['applicant_year_count'], context['applicant'], context['year'] = applicant_year_count, applicant, year
 
-"""
+
 
 
 
