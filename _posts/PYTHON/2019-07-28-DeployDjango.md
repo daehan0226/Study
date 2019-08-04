@@ -113,6 +113,9 @@ categories: PYTHON
 
 # **에러 : sock 파일은 wsig, setting 파일이 있는 곳에 생성되게 path 설정!!!!!! 
 
+# gunicorn 에러 발생시 가상환경-> manage.py 있는 디렉토리에서 gunicron [프로젝트이름].wsgi:application 실행해서 에러 원인 찾기
+# log/error 
+
 
 # git 
 
