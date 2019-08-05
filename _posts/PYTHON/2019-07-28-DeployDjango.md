@@ -87,10 +87,17 @@ categories: PYTHON
                 access_log      /home/daehan/test/log/access.log;
                 error_log       /home/daehan/test/log/error.log;
 
-                location /static/ { # STATIC_URL
-                    alias /home/daehan/test/deploy_test/static/; # STATIC_ROOT
-                    expires 30d;
-                }
+                   location /static1/ { # STATIC_URL
+                        alias /home/daehan/project/patent/main/static/; # STATIC_ROOT
+                        expires 30d;
+                    }
+
+
+                    location /static2/ { # STATIC_URL
+                        alias /home/daehan/project/patent/static/; # STATIC_ROOT
+                        expires 30d;
+                    }
+
 
                 location / {
                     include proxy_params;
