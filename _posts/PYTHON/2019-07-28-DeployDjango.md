@@ -61,7 +61,7 @@ categories: PYTHON
         WorkingDirectory=/home/daehan/test/deploy_test  # 프로젝트 디렉토리 (현재 내부에 deploy_test manage.py static db.sqlite3 있음)
         ExecStart=/home/daehan/test/env/bin/gunicorn --workers 3 --bind unix:/home/daehan/test/config/deploy_test.sock deploy_test.wsgi:application (x)
         
-        ExecStart=/home/daehan/test/env/bin/gunicorn --workers 3 --bind unix:/home/daehan/test/deploy_test(프로젝트 이름)/deploy_test.sock deploy_test.wsgi:application (0)
+        ExecStart=/home/daehan/test/env/bin/gunicorn --workers 3 --bind unix:/home/daehan/test/deploy_test(프로젝트 이름)/deploy_test.sock deploy_test.wsgi:application (0)   == wsgi.py 있는 디렉토리가 아닌 manage.py 가 있는  sock 파일이 생성되어야함
 
         [Install]
         WantedBy=multi-user.target
