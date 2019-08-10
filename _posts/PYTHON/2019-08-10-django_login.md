@@ -64,6 +64,15 @@ categories: PYTHON
                 
 
 
+# urls.py
+
+            from django.contrib.auth import views as auth_views
+            path('login/', auth_views.LoginView.as_view(template_name="user/login.html"), name='login'),
+            path('logout/', auth_views.LogoutView.as_view(next_page='/'), name='logout'),
+
+* django.contrib.auth  LoginView, LogoutView import 하여 template, url 설정 // form - html에서 직접 설정. 
+
+
 [참고1]:https://docs.djangoproject.com/en/2.2/ref/contrib/auth/
 [참고2]:http://ruaa.me/django-view/
 
