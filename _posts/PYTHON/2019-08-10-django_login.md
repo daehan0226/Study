@@ -6,9 +6,6 @@ categories: PYTHON
 ---
 [참고1]
 [참고2]
-[참고1]:https://docs.djangoproject.com/en/2.2/ref/contrib/auth/
-[참고2]:http://ruaa.me/django-view/
-
 
 # froms.py
 * User form 꾸미기
@@ -65,3 +62,8 @@ categories: PYTHON
                 context = { "form" : form }
                 return render(request, self.template_name, context)
                 
+
+
+[참고1]:https://docs.djangoproject.com/en/2.2/ref/contrib/auth/
+[참고2]:http://ruaa.me/django-view/
+
