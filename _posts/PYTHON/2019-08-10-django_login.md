@@ -4,7 +4,8 @@ title: Django_login
 categories: PYTHON
 
 ---
-
+[참고1]
+[참고2]
 [참고1]:https://docs.djangoproject.com/en/2.2/ref/contrib/auth/
 [참고2]:http://ruaa.me/django-view/
 
