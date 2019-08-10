@@ -6,8 +6,7 @@ categories: PYTHON
 ---
 
 [참고1]:https://docs.djangoproject.com/en/2.2/ref/contrib/auth/
-[참고1]:http://ruaa.me/django-view/
-[참고1]
+[참고2]:http://ruaa.me/django-view/
 
 
 # froms.py
