@@ -69,7 +69,9 @@ categories: PYTHON
             def dispatch(self, *args, **kwargs):
               return super().dispatch(*args, **kwargs)
               
-              # dispatch - 클래스 실행 시 reqeust에 맞는 함수 실행시킴(get -> get 함수, post -> post 함수) 
+              # urls 에서 as_view() 에 의해 class의 인스턴스를 생성하고 dispatch() 메소드를 호출 
+              # dispatch는 request를 살펴보고 GET인지 POST인지 혹은 다른 형태인지 결정
+              # 결정이 되면 request를 매칭되는 메소드로 전달해주며, 그렇지 않으면 HttpResponsNotAllowed 에러를 발생시킨다
 
 
 
