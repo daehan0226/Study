@@ -57,10 +57,19 @@ categories: PYTHON
 
   * By overriding dispatch method:
      
-        @method_decorator(login_required)
-        def dispatch(self, request, *args, **kwargs):
-         return super(self.__class__, self).dispatch(request, *args, **kwargs)
+     
+        from django.utils.decorators import method_decorator
+        from django.contrib.auth.decorators import login_required
 
+        class TableList_page(View):
+            template_name = 'main/tables.html'
+            context = {}
+
+            @method_decorator(login_required)
+            def dispatch(self, *args, **kwargs):
+              return super().dispatch(*args, **kwargs)
+              
+              # dispatch - 클래스 실행 시 reqeust에 맞는 함수 실행시킴(get -> get 함수, post -> post 함수) 
 
 
 
