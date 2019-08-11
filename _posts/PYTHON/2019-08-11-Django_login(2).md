@@ -6,7 +6,7 @@ categories: PYTHON
 ---
 
 
-* 로그인 상태에서 register 접근
+* 로그인 상태에서 register 접근 ---->  get, dispatch 안됌.. 수정 필요
 
 
         class CreateUser(FormView):
@@ -20,6 +20,12 @@ categories: PYTHON
                 if request.user.is_authenticated():
                     return HttpResponseRedirect('/main')
                 return super(CreateUser, self).get(request, *args, **kwargs)
+                
+            def dispatch(self, request, *args, **kwargs):
+                if request.user.is_authenticated():
+                    return HttpResponseRedirect('/main')
+                return super(CreateUser, self).get(request, *args, **kwargs)
+
 
 
             def form_valid(self, form):
