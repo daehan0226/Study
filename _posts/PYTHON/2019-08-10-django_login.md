@@ -1,11 +1,12 @@
 ---
 layout: post
-title: Django_login
+title: Django_login(1)
 categories: PYTHON
 
 ---
 [참고1]
 [참고2]
+
 
 # views.py 수정 후 // 
 
