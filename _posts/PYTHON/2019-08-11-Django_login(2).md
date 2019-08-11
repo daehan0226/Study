@@ -41,8 +41,8 @@ categories: PYTHON
 
 # 로그인 관련 템플릿
 
-[참고1]:
-[참고2]:
+[참고1]
+[참고2]
 
 * {% if request.user.is_authenticated %} {{ user.username }} 님 로그아웃하기 {% else %} 로그인  {% endif %}
 
@@ -101,7 +101,7 @@ categories: PYTHON
           {% endif %}
 
 
-
+1111
 [참고3]
 
 
