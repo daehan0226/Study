@@ -13,9 +13,10 @@ categories:
 
 * mysql 서버 설정
   * sudo apt-get install mysql-server
-  * mysql port 허용 - sudo ufw 3306
   * sudo nano /etc/mysql/mariadb.conf.d/50-server.cnf
-    * bind-address = 0.0.0.0 으로 수정  (주석 삭제)
+    * bind-address = 127.0.0.1 -->> 0.0.0.0 으로 수정  (주석 제거)
+  * mysql port 허용 - sudo ufw 3306
+
   * mysql 접속
     1. mysql -uroot -p
     2. use mysql
