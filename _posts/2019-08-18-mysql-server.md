@@ -12,9 +12,9 @@ categories:
 
 
 * mysql 서버 설정
-  1. sudo apt-get install mysql-server
-  2. mysql port 허용 - sudo ufw 3306
-  3. mysql 접속
+  * sudo apt-get install mysql-server
+  * mysql port 허용 - sudo ufw 3306
+  * mysql 접속
     1. mysql -uroot -p
     2. use mysql
     3. 서버에 접속할 클라이언트단 정보 설정하기
