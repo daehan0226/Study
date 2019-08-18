@@ -20,7 +20,13 @@ categories:
     3. 서버에 접속할 클라이언트단 정보 설정하기
     4. insert into user (host, user, password) values ('서버에 접속할 ip 주소', '서버 접속시 사용할 user 이름', password('*******'));
     5. insert into db values('서버에 접속할 ip 주소', '서버 mysql에서 db 선택','서버 접속시 허용되는 user 이름' ,'y','y','y','y','y','y','y','y','y','y','y','y','y','y','y','y','y', 'y', 'y');  // 기타 사항 y 로 허용
+    6. 설정 완료 후 flush privileges; / exit 
+  * 기타 설정사항은 desc user, desc db 로 확인 가능 
     
+    
+![20190818_174322](https://user-images.githubusercontent.com/47915302/63222222-cb0ceb00-c1df-11e9-816a-505106879f64.png)
+![20190818_174341](https://user-images.githubusercontent.com/47915302/63222223-cc3e1800-c1df-11e9-9dd4-da0097bc78bc.png)
+
 
 * 클라이언트 설정
     
