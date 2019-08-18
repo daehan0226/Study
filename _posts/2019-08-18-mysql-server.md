@@ -23,27 +23,27 @@ categories:
     
 
 * 클라이언트 설정
-
-
     # main.py
+
+
     def connect():
-        return pymysql.connect(host='서버에 접속할 ip 주소(이 파일이 작성되는 곳의 ip)', user='daehan', password='*****', db='users', charset='utf8')
+       return pymysql.connect(host='서버에 접속할 ip 주소(이 파일이 작성되는 곳의 ip)', user='daehan', password='*****', db='users', charset='utf8')
     # 상단에서 설정한 서버에 접속시 허용되는 user 이름 = daehan, 해당 user가 접근 가능한 db는 users 라는 database, 
 
     def select_data():
-        conn = connect()
-        try:
-            curs = conn.cursor(pymysql.cursors.DictCursor)
-            sql = """select * from user_list order by uid"""
-            curs.execute(sql)
-            row = curs.fetchall()
-            print(row)
-            return row
-        except Exception as e:
-            print(e)
-            return None
-        finally:
-            conn.close()
+       conn = connect()
+       try:
+           curs = conn.cursor(pymysql.cursors.DictCursor)
+           sql = """select * from user_list order by uid"""
+           curs.execute(sql)
+           row = curs.fetchall()
+           print(row)
+           return row
+       except Exception as e:
+           print(e)
+           return None
+       finally:
+           conn.close()
 
 
 
