@@ -21,6 +21,7 @@ categories:
     4. insert into user (host, user, password) values ('서버에 접속할 ip 주소', '서버 접속시 사용할 user 이름', password('*******'));
     5. insert into db values('서버에 접속할 ip 주소', '서버 mysql에서 db 선택','서버 접속시 허용되는 user 이름' ,'y','y','y','y','y','y','y','y','y','y','y','y','y','y','y','y','y', 'y', 'y');  // 기타 사항 y 로 허용
     6. 설정 완료 후 flush privileges; / exit 
+    7. sudo service mysql restart
   * 기타 설정사항은 desc user, desc db 로 확인 가능 
     
     
