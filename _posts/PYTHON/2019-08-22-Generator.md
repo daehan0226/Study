@@ -25,26 +25,26 @@ categories: PYTHON
             print(i)
             
             
+        sleep...    list = [sleep_func(x) for x in range(5)]  으로 list에 하나씩 append 되면서 sleep 이 호출됨
         sleep...
         sleep...
         sleep...
         sleep...
-        sleep...
-        0
+        0         print(i) for i in list 
         1
         2
         3
         4
         ====================
-        sleep...
+        sleep...    print(i) for i in gen //  print(0)
         0
-        sleep...
+        sleep...    print(1)
         1
-        sleep...
+        sleep...   print(2)
         2
-        sleep...
+        sleep...   print(3)
         3
-        sleep...
+        sleep...   print(4)
         4
         
         
