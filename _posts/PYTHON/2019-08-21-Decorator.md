@@ -5,6 +5,48 @@ categories: PYTHON
 
 ---
 
+# Class decorator
+
+
+        class Worker():
+                @crawler_log(name="New worker", msg="run")        # 호출 시 __init__ 에서 받는 인자를 보내줌 
+                def run(self):
+                        run something
+
+
+        class crawler_log():
+
+            def __init__(self, name, msg):
+                self.name = name
+                self.logger = logging.getLogger(name)
+                self.msg = msg
+
+            def __call__(self, f):                        # 데코레이터에서 호출하는 부분
+                self.logging_wirte(self.name, self.msg)   # Worker 의 run이 실행되기 전 실행됨
+                # @functools.wraps(f)
+                def decorated(*args, **kwargs):
+                    f(*args, **kwargs)                    # run 실행해라
+                return decorated                          # run 을 실행하는 부분을 리턴하여 실제 데코레이터가 호출될때 f 즉 run 을 실행
+
+            def logging_wirte(self, worker, msg):
+                mylogger = self.logger
+                mylogger.setLevel(logging.INFO)
+                formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+
+                stream_hander = logging.StreamHandler()
+                stream_hander.setFormatter(formatter)
+                mylogger.addHandler(stream_hander)
+                file_handler = logging.FileHandler('{}.log'.format(self.name))
+                mylogger.addHandler(file_handler)
+
+                mylogger.info("{}'s crawling {}!!!".format(worker, msg))
+
+
+            def logging_error(self, worker, msg):
+                mylogger = self.logger
+                mylogger.error("crawling error!!! {}-{}".format(worker, msg))
+
+
 
 
         import datetime
