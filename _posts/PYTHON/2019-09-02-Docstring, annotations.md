@@ -9,6 +9,28 @@ categories: PYTHON
 
 * 문서화 클래스, 함수 바로 아래애 """ """ / ''' ''' 로 해당 클래스 또는 함수에 대한 설명
 
+ex)
+
+
+         class newclass:
+             """
+             zzz
+             """
+             def zz(self):
+                 '''
+
+                 :return:
+                 '''
+                 return '123'
+
+
+         >>> x = newclass
+         >>> x.__doc__
+         '\n    zzz\n    '
+         >>> x.zz.__doc__
+         '\n\n        :return:\n        '
+
+
 
 # Annotations
 
