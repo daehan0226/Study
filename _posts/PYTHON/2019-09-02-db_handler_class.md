@@ -5,6 +5,9 @@ categories: PYTHON
 
 ---
 
+
+# 고려사항 : update, insert 파라미터 docstring 참고하도록 작성. 다른 테이블에도 용이하게 사용할 수 있도록 호환성 높게 작성하기.
+
         import pymysql
 
         class db_handler:
