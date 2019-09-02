@@ -7,6 +7,7 @@ categories: PYTHON
 
 
 # 고려사항 : update, insert 파라미터 docstring 참고하도록 작성. 다른 테이블에도 용이하게 사용할 수 있도록 호환성 높게 작성하기.
+# 모든 values 값을 넣지 않고 일부 데이터(일부 칼럼)만 넣을 시 사전으로 보내기
 
         import pymysql
 
