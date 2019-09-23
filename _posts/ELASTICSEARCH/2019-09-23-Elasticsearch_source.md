@@ -8,6 +8,10 @@ categories: ELASTICSEARCH
 
 
 
+    from elasticsearch import Elasticsearch
+
+    es = Elasticsearch([{'host': '192.168.0.1', 'port': 9200}])
+
     indexes = ["index"]
 
     for index in indexes:
