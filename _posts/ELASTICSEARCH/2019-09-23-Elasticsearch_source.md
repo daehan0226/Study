@@ -53,6 +53,13 @@ categories: ELASTICSEARCH
         
         
 # transport.perform_request
+
+        def __init__(self, ~ max_retries=3, send_get_body_as="GET",**kwargs):
+            ~~~
+            self.kwargs = kwargs
+            self.max_retries = max_retries
+            self.send_get_body_as = send_get_body_as
+            ~~~
         
         def perform_request(self, method, url, headers=None, params=None, body=None):
         """
