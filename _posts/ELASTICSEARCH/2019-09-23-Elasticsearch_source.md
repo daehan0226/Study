@@ -126,7 +126,7 @@ categories: ELASTICSEARCH
                     timeout=timeout,
                 )
 
-            except TransportError as e:
+            except TransportError as e:                                ##### 
                 if method == "HEAD" and e.status_code == 404:
                     return False
 
