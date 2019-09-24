@@ -187,3 +187,6 @@ categories:
         print("connection status : ", db.conn._closed)   # False
         db.conn.close()
         print("connection status : ", db.conn._closed)   # True = closed
+        
+        
+        ### _query -> return rowcount / execute -> return result
