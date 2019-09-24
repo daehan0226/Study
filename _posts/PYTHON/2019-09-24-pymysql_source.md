@@ -184,6 +184,6 @@ categories:
         db.conn.commit()  # or db.conn.autocommit(True) before actual commits
 
         # Close
-        print("connection status : ", db.conn._closed)
+        print("connection status : ", db.conn._closed)   # False
         db.conn.close()
-        print("connection status : ", db.conn._closed)
+        print("connection status : ", db.conn._closed)   # True = closed
