@@ -181,9 +181,7 @@ categories:
         print("executed_query : ", db.cursor._executed)
         print("last_query :", db.cursor._last_executed)
 
-        db.conn.commit()  # or db.conn.autocommit(True)
-
-        db.conn._read_query_result()
+        db.conn.commit()  # or db.conn.autocommit(True) before actual commits
 
         # Close
         print("connection status : ", db.conn._closed)
