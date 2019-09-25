@@ -6,6 +6,9 @@ categories: ELASTICSEARCH
 ---
 
 
+https://www.elastic.co/guide/en/elasticsearch/reference/current/removal-of-types.html
+
+
 
 * two types in one index
 * This was a bad analogy that led to incorrect assumptions. In an SQL database, tables are independent of each other. The columns in one table have no bearing on columns with the same name in another table. This is not the case for fields in a mapping type.
