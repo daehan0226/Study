@@ -7,7 +7,7 @@ categories:
 
 
 
-* python manage.py runserver --setting=dh_django_app.settings.dev(선택)
+* python manage.py runserver --setting=dh_django_app.settings.dev(선택)  ###
 
 
 
@@ -23,11 +23,7 @@ categories:
         │  │  views.py
         │  │  __init__.py
         │  │
-        │  ├─migrations
-        │  │      __init__.py
-        │  │
-        │  └─__pycache__
-        │          __init__.cpython-37.pyc
+        │  └─migrations
         │
         └─dh_django_app
             │  db.sqlite3
@@ -35,24 +31,18 @@ categories:
             │  wsgi.py
             │  __init__.py
             │
-            ├─settings
-            │  │  defaults.py
-            │  │  dev.py
-            │  │  production.py
-            │  │  settings.py
-            │  │  __init__.py
-            │  │
-            │  └─__pycache__
-            │          defaults.cpython-37.pyc
-            │          dev.cpython-37.pyc
-            │          production.cpython-37.pyc
-            │          __init__.cpython-37.pyc
-            │
-            └─__pycache__
-                    settings.cpython-37.pyc
-                    urls.cpython-37.pyc
-                    wsgi.cpython-37.pyc
-                    __init__.cpython-37.pyc
+            ├─settings                ### setting files
+               │  defaults.py
+               │  dev.py
+               │  production.py
+               │  settings.py
+               │  __init__.py
+               │
+               └─__pycache__
+                      defaults.cpython-37.pyc
+                      dev.cpython-37.pyc
+                      production.cpython-37.pyc
+                      __init__.cpython-37.pyc
 
             
             
