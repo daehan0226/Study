@@ -7,7 +7,7 @@ categories:
 
 
 
-* python manage.py runserver --setting=dh_django_app.settings.dev(선택)  ###
+* python manage.py runserver --setting=dh_django_app.settings.base  ###
 
 
 
@@ -21,7 +21,7 @@ categories:
 
 
         def main():
-            os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'dh_django_app.settings.default')   # 실행에서 --setting= 의 default
+            os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'dh_django_app.settings.base')   # 실행에서 --setting= 의 default
             try:
                 from django.core.management import execute_from_command_line
             except ImportError as exc:
@@ -58,7 +58,7 @@ categories:
             │  __init__.py
             │
             ├─settings                ### setting files
-               │  defaults.py
+               │  base.py
                │  dev.py
                │  production.py
                │  settings.py
