@@ -58,9 +58,9 @@ categories:
             │  __init__.py
             │
             ├─settings                ### setting files
-               │  base.py
+               │  base.py             ##  ALLOWED_HOSTS = ['127.0.0.1']
                │  dev.py
-               │  production.py
+               │  production.py       ## DEBUG = False       
                │  settings.py
                │  __init__.py
                │
