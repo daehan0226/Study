@@ -5,7 +5,8 @@ categories:
 - PYTHON
 ---
 
-sss
+
+* https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Authentication#Logout_template
 
 
 * accounts/urls.py
