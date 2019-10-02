@@ -8,7 +8,7 @@ categories:
 
 
 * python manage.py runserver --setting=dh_django_app.settings.base  ###
-
+* python manage.py runserver 로 실행할씨 환경변수에 DJANGO_SETTINGS_MODULE 이 저장되어 있으면 그 세팅을 
 
 
 * manage.py
@@ -72,4 +72,4 @@ categories:
 
             
             
-d
+
