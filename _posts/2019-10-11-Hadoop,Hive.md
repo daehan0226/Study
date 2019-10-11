@@ -69,6 +69,13 @@ categories:
  * C:\hadoop-2.6.0\sbin\start-dfs.sh 실행 후 start-yarn.sh 실행
  
  
+ * hive 데이터
+ 
+        $HADOOP_HOME/bin/hadoop fs -mkdir /tmp
+        $HADOOP_HOME/bin/hadoop fs -mkdir /home /home/hive /home/hive/warehouse
+        $HADOOP_HOME/bin/hadoop fs -chmod g+w   /tmp
+        $HADOOP_HOME/bin/hadoop fs -chmod g+w   /home /home/hive /home/hive/warehouse
+
  
  # Hive - config
  
@@ -76,6 +83,13 @@ categories:
  * mysql 설정 필요 
  * mysql 서버 실행하기 ( cmd - net start mysql80 (mysql80,mysql 등 설치 이름 )
  * mysql hive 유저 추가하고 권한 부여
+   * grant all privileges on *.* to hive@localhost identified by 'hive' with grant option;
+ * mysql -u hive -p
+ * mysql> create database hive;
+ * Query OK, 1 row affected (0.00 sec)
+ * mysql> use hive;
+ * Database changed
+
  
  * mysql 스키마 설정 
    * cmd 관리자 권한 실행
