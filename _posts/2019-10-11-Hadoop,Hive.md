@@ -57,7 +57,7 @@ categories:
   * master
     * SERVER02   (보조네임노드)
     
-  * slaves       ( 데이터노드 )
+  * slaves       ( 데이터노드 - 밑에는 예시) // /etc/hosts, /etc/sysconfig/network 확인 필요 )
     * 127.0.0.3 SERVER03
     * 127.0.0.4 SERVER04
     * 127.0.0.5 SERVER05
@@ -97,13 +97,16 @@ categories:
  * mysql> use hive;
  * Database changed
 
+
  
- * mysql 스키마 설정 
-   * cmd 관리자 권한 실행
-   * C:\hive\scripts\metastore\upgrade\mysql
-   * mysql -uroot -p
-   * use hive;
-   * source hive-schema-2.1.0.mysql.sql -> 스키마
+* mysql 스키마 설정 
+  * cmd 관리자 권한 실행
+  * C:\hive\scripts\metastore\upgrade\mysql
+  * mysql -uroot -p
+  * use hive;
+  * source hive-schema-2.1.0.mysql.sql -> 스키마
+* cmd   
+  * $HIVE_HOME/bin/schematool -initSchema -dbType mysql ??? -> 필요한 건가? 확인 필요
    
  
  * Hive 2.1.0 설치
