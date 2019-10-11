@@ -27,7 +27,7 @@ categories:
     * JAVA_HOME C:\java
     * PATH : C:\java\jdk-13\bin, %JAVA_HOME%\bin, C:\hive\bin
 
-
+  * hive 설치 유튜브 참고  https://www.youtube.com/watch?v=Bs5HJFIEA2o
 
 
 
@@ -171,3 +171,4 @@ categories:
 
 * hive 데이터 올리기 연습
   * https://corock.tistory.com/347
+  * https://m.blog.naver.com/estern/220825017765
