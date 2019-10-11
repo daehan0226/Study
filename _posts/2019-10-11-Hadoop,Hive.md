@@ -91,10 +91,10 @@ categories:
 * mysql 서버 실행하기 ( cmd - net start mysql80 (mysql80,mysql 등 설치 이름 )
 * mysql hive 유저 추가하고 권한 부여
   * mysql -u root -p
-  * mysql> create database hive;
-  * mysql> create user 'hiveuser'@'%' IDENTIFIED BY 'hivepass';
-  * mysql> GRANT all on *.* to 'hiveuser'@localhost identified by 'hivepass';
-  * mysql>  flush privileges;  
+  * mysql create database hive;
+  * mysql create user 'hiveuser'@'%' IDENTIFIED BY 'hivepass';
+  * mysql GRANT all on *.* to 'hiveuser'@localhost identified by 'hivepass';
+  * mysql flush privileges;  
   
 * mysql -u hive -p
 * mysql> create database hive;
