@@ -70,3 +70,15 @@ categories:
  
  
  
+ # Hive - config
+ 
+ * hadoop 설치 및 실행한 후
+ * mysql 설정 필요 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
