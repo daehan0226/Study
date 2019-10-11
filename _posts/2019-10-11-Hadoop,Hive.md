@@ -5,6 +5,13 @@ categories:
 - blog
 ---
 
+* Version
+  * hadoop 2.6.0
+  * java -version  1.8.0_221   ( jdk-8u221-windows-x64 )
+  * hive ( apache-hive-2.1.0-bin.tar.gz )
+  * mysql-java connector ( mysql-connector-java-5.1.48)
+
+
 
 # Hadoop, HIVE 설치
 
@@ -137,6 +144,8 @@ categories:
         </configuration>
  
  
+ 
+ * hadoop - start-all.sh // hive --service metastore 실행 후에 밑에 데이터 넣기 실행
  
  
  * hive 데이터 넣기
