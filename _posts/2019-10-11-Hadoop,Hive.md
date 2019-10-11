@@ -75,8 +75,15 @@ categories:
  * hadoop 설치 및 실행한 후
  * mysql 설정 필요 
  * mysql 서버 실행하기 ( cmd - net start mysql80 (mysql80,mysql 등 설치 이름 )
+ * mysql hive 유저 추가하고 권한 부여
  
- 
+ * mysql 스키마 설정 
+   * cmd 관리자 권한 실행
+   * C:\hive\scripts\metastore\upgrade\mysql
+   * mysql -uroot -p
+   * use hive;
+   * source hive-schema-2.1.0.mysql.sql -> 스키마
+   
  
  * Hive 2.1.0 설치
  * https://archive.apache.org/dist/hive/hive-2.1.0/
@@ -118,5 +125,15 @@ categories:
  
  
  
+ * hive 데이터 넣기
+   * hive> create table hive01(seq int, crt_dt date);
+   * hive> tables;
+   * hive> select * from hive01;
+   
+ 
+ * hive 데이터 확인
+   * mysql -u hive -p
+   * use hive;
+   * select * from tbls;
  
  
