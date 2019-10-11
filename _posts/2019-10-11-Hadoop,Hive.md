@@ -84,18 +84,23 @@ categories:
         $HADOOP_HOME/bin/hadoop fs -chmod g+w   /home /home/hive /home/hive/warehouse
 
  
- # Hive - config
+# Hive - config
  
- * hadoop 설치 및 실행한 후
- * mysql 설정 필요 
- * mysql 서버 실행하기 ( cmd - net start mysql80 (mysql80,mysql 등 설치 이름 )
- * mysql hive 유저 추가하고 권한 부여
-   * grant all privileges on *.* to hive@localhost identified by 'hive' with grant option;
- * mysql -u hive -p
- * mysql> create database hive;
- * Query OK, 1 row affected (0.00 sec)
- * mysql> use hive;
- * Database changed
+* hadoop 설치 및 실행한 후
+* mysql 설정 필요 
+* mysql 서버 실행하기 ( cmd - net start mysql80 (mysql80,mysql 등 설치 이름 )
+* mysql hive 유저 추가하고 권한 부여
+  * mysql -u root -p
+  * mysql> create database hive;
+  * mysql> create user 'hiveuser'@'%' IDENTIFIED BY 'hivepass';
+  * mysql> GRANT all on *.* to 'hiveuser'@localhost identified by 'hivepass';
+  * mysql>  flush privileges;  
+  
+* mysql -u hive -p
+* mysql> create database hive;
+* Query OK, 1 row affected (0.00 sec)
+* mysql> use hive;
+* Database changed
 
 
  
