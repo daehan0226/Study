@@ -37,6 +37,23 @@ categories:
     * set YARN_CONF_DIR=%HADOOP_CONF_DIR%
     * set PATH=%PATH%;%HADOOP_PREFIX%\bin
 
+  * /core-site.xml
+  
+        <configuration>
+          <property>
+            <name>fs.default.name</name>
+            <value>hdfs://localhost:9000</value>       # 하둡이 다른 서버들과 통신하는 포트 9000
+          </property>
+        </configuration>
+
+
+  * master
+    * SERVER02   (보조네임노드)
+    
+  * slaves       ( 데이터노드 )
+    * 127.0.0.3 SERVER03
+    * 127.0.0.4 SERVER04
+    * 127.0.0.5 SERVER05
 
 
  
