@@ -167,3 +167,7 @@ categories:
 
 * Hadoop 에서 데이터 확인 
   * C:\hadoop-2.6.0\bin\hadoop fs -ls -R \
+
+
+* hive 데이터 올리기 연습
+  * https://corock.tistory.com/347
