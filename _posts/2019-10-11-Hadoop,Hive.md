@@ -152,3 +152,6 @@ categories:
  
  ![캡처](https://user-images.githubusercontent.com/47915302/66632794-3b664480-ec44-11e9-89a4-3adc8fd24c3e.PNG)
 
+
+* Hadoop 에서 데이터 확인 
+  * C:\hadoop-2.6.0\bin\hadoop fs -ls -R \
