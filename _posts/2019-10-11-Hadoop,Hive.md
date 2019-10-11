@@ -74,8 +74,46 @@ categories:
  
  * hadoop 설치 및 실행한 후
  * mysql 설정 필요 
+ * mysql 서버 실행하기 ( cmd - net start mysql80 (mysql80,mysql 등 설치 이름 )
  
  
+ 
+ * Hive 2.1.0 설치
+ * https://archive.apache.org/dist/hive/hive-2.1.0/
+ * 설치 후 폴더명 hive로 바꾼 후 C:\에 이동
+ * hive/lib/mysql-connector-java-5.1.48, mysql-connector-java-5.1.48-bin 넣기 ( mysql - hive 연동 )
+ * hive/bin/hive-config.sh
+   * export HADOOP_HOME=C:\hadoop-2.6.0 추가
+ * hive/conf/hive_site.xml
+ 
+
+        <configuration>
+                <property>
+            <name>hive.metastore.local</name>
+            <value>false</value>
+          </property>
+          <property>
+            <name>javax.jdo.option.ConnectionDriverName</name>   // mysql 과 연동한다.
+            <value>com.mysql.jdbc.Driver</value>
+            <description>MySQL JDBC driver class</description>
+          </property>
+          <property>
+            <name>javax.jdo.option.ConnectionURL</name>          // mysql 접속
+            <value>jdbc:mysql://localhost:3306/hive?createDatabaseifNotExist=true</value>   <!-- &amp;useSSL=false -->
+          </property>
+          <property>
+            <name>javax.jdo.option.ConnectionUserName</name>      // mysql user 아이디 만든 후  - mysql -u hive -p 로 접속하여 데이터 확인
+            <value>hive</value>
+          </property>
+          <property>
+            <name>javax.jdo.option.ConnectionPassword</name>       // msyql user 비밀번호(현재 hive)
+            <value>hive</value>
+          </property>
+          <property>
+            <name>hive.metastore.schema.verification</name>        // hive 유저의 스키마 버전 달라고 에러 발생안함 
+            <value>false</value>
+          </property>
+        </configuration>
  
  
  
