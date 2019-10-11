@@ -24,7 +24,7 @@ categories:
 
 
 
-# Hadoop 실행
+# Hadoop - config
 
 * hadoop-2.6.0/bin
   * /hadoop 명령  -> 첫 실행 시 /bin/hadoop namenode -format  (다시 하면 리셋됨)
@@ -55,5 +55,18 @@ categories:
     * 127.0.0.4 SERVER04
     * 127.0.0.5 SERVER05
 
-
+  * /yarn-site.xml
+    
+        <property>
+          <name>yarn.web-proxy.address</name>
+          <value>http://localhost:8089</value>
+        </property>
+ 
+ 
+ # Run Hadoop 
+ 
+ * C:\hadoop-2.6.0\sbin\start-all.sh  -> 더블 클릭 실행  또는
+ * C:\hadoop-2.6.0\sbin\start-dfs.sh 실행 후 start-yarn.sh 실행
+ 
+ 
  
