@@ -93,21 +93,21 @@ Material-UI
 
         class CustomizedSwitch extends Component {
           state = {
-            isActive : this.props.isActive,
+            isActive : this.props.isActive,                  // 부모 컴포넌트에서 받은 데이터 
 
           };
 
-          UNSAFE_componentWillReceiveProps = props => {
+          UNSAFE_componentWillReceiveProps = props => {     // 해당 클래스(스위치)의 props 가 변경될때 호출하여 데이터 업데이트
             this.setState({
               isActive : props.isActive,
             });
           };
 
-          handleStartClick = () => {
+          handleStartClick = () => {                         // 부모에서 받은 이벤트 호출
             this.props.onStartClick();
           };
 
-          handleStopClick = () => {
+          handleStopClick = () => {                         // 부모에서 받은 이벤트 호출
             this.props.onStopClick();
           };
 
@@ -126,7 +126,7 @@ Material-UI
                       value={this.state.isActive}
                     />
                   }
-                  // label={ state.checked === true ? "On" : "Off" }
+                  // label={ state.checked === true ? "On" : "Off" }  // 오른쪽에 라벨 글 
                 />
               </FormGroup>
             );
